@@ -81,7 +81,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://sandbox.edisebay.com';
+    //protected $host = 'https://sandbox.edisebay.com/v1/api';
     //protected $host = 'https://api.edisebay.com';
     //protected $host = 'https://open.edisebay.com';
 

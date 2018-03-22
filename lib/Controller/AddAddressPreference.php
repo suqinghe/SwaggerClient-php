@@ -2,23 +2,24 @@
 namespace Swagger\Client\Controller;
 
 
-use Swagger\Client\Api\OpenApiApi;
-use Swagger\Client\Model\GetAddressPreferenceListRequest;
-use Swagger\Client\Model\GetAddressPreferenceListRequestData;
+use Swagger\Client\Api\DefaultEbayClient;
 use Swagger\Client\Model\AddAddressPreferenceRequest;
 use Swagger\Client\Model\AddAddressPreferenceRequestData;
+use Swagger\Client\ApiException;
 
 /**
  * @desc 新增地址信息
  * @author Jack.Xu1
  */
-class AddAddressPreference extends AbstractController
+class AddAddressPreference 
 {
     function index(){
         try {
             
-            $token=$this->getAccessToken();
-            $client = new OpenApiApi();
+            $url='https://sandbox.edisebay.com/v1/api';
+            $authorization="Bearer TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
+            $client = new DefaultEbayClient($url,$authorization);
+            
             
             $req= new AddAddressPreferenceRequest();
             $req->setTimestamp(time());
@@ -36,10 +37,12 @@ class AddAddressPreference extends AbstractController
             $data->setPostcode('20000');
             $data->setProvince('360000');//江西
             $req->setData($data);
-            $rep =$client->addAddressPreference($token,$req);
+            
+            $rep =$client->addAddressPreference($req);
             dump($rep->getData()->getAddressId());
-        } catch (\Exception $e) {
-            $this->getMessage($e);
+            
+        } catch (ApiException $e) {
+            dump(json_decode($e->getResponseBody(),true));
         }
         
     }

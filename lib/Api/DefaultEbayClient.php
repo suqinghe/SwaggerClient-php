@@ -47,7 +47,7 @@ use Swagger\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class OpenApiApi
+class DefaultEbayClient
 {
     /**
      * @var ClientInterface
@@ -58,17 +58,26 @@ class OpenApiApi
      * @var Configuration
      */
     protected $config;
+    
+    protected $url;
+    
+    protected $authorization;
 
-    /**
+    /**@param string          $Url
+     * @param string          $Authorization
      * @param ClientInterface $client
      * @param Configuration   $config
      * @param HeaderSelector  $selector
      */
     public function __construct(
+        $Url = null,
+        $Authorization = null,
         ClientInterface $client = null,
         Configuration $config = null,
         HeaderSelector $selector = null
     ) {
+        $this->url = $Url;
+        $this->authorization= $Authorization;
         $this->client = $client ?: new Client();
         $this->config = $config ?: new Configuration();
         $this->headerSelector = $selector ?: new HeaderSelector();
@@ -87,16 +96,15 @@ class OpenApiApi
      *
      * 新增地址信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddAddressPreferenceRequest $add_address_preference_request addAddressPreferenceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\AddAddressPreferenceResponses
      */
-    public function addAddressPreference($authorization, $add_address_preference_request)
+    public function addAddressPreference($add_address_preference_request)
     {
-        list($response) = $this->addAddressPreferenceWithHttpInfo($authorization, $add_address_preference_request);
+        list($response) = $this->addAddressPreferenceWithHttpInfo($add_address_preference_request);
         return $response;
     }
 
@@ -105,17 +113,16 @@ class OpenApiApi
      *
      * 新增地址信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddAddressPreferenceRequest $add_address_preference_request addAddressPreferenceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\AddAddressPreferenceResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addAddressPreferenceWithHttpInfo($authorization, $add_address_preference_request)
+    public function addAddressPreferenceWithHttpInfo($add_address_preference_request)
     {
         $returnType = '\Swagger\Client\Model\AddAddressPreferenceResponses';
-        $request = $this->addAddressPreferenceRequest($authorization, $add_address_preference_request);
+        $request = $this->addAddressPreferenceRequest($add_address_preference_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -267,9 +274,10 @@ class OpenApiApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function addAddressPreferenceRequest($authorization, $add_address_preference_request)
+    protected function addAddressPreferenceRequest($add_address_preference_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling addAddressPreference'
@@ -282,7 +290,7 @@ class OpenApiApi
             );
         }
 
-        $resourcePath = '/v1/api/AddAddressPreference';
+        $resourcePath = '/AddAddressPreference';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -356,7 +364,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -367,16 +375,15 @@ class OpenApiApi
      *
      * 新增交运偏好
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddConsignPreferenceRequest $add_consign_preference_request addConsignPreferenceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\AddConsignPreferenceResponses
      */
-    public function addConsignPreference($authorization, $add_consign_preference_request)
+    public function addConsignPreference($add_consign_preference_request)
     {
-        list($response) = $this->addConsignPreferenceWithHttpInfo($authorization, $add_consign_preference_request);
+        list($response) = $this->addConsignPreferenceWithHttpInfo($add_consign_preference_request);
         return $response;
     }
 
@@ -385,17 +392,16 @@ class OpenApiApi
      *
      * 新增交运偏好
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddConsignPreferenceRequest $add_consign_preference_request addConsignPreferenceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\AddConsignPreferenceResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addConsignPreferenceWithHttpInfo($authorization, $add_consign_preference_request)
+    public function addConsignPreferenceWithHttpInfo($add_consign_preference_request)
     {
         $returnType = '\Swagger\Client\Model\AddConsignPreferenceResponses';
-        $request = $this->addConsignPreferenceRequest($authorization, $add_consign_preference_request);
+        $request = $this->addConsignPreferenceRequest($add_consign_preference_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -541,15 +547,15 @@ class OpenApiApi
     /**
      * Create request for operation 'addConsignPreference'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddConsignPreferenceRequest $add_consign_preference_request addConsignPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function addConsignPreferenceRequest($authorization, $add_consign_preference_request)
+    protected function addConsignPreferenceRequest($add_consign_preference_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling addConsignPreference'
@@ -562,7 +568,7 @@ class OpenApiApi
             );
         }
 
-        $resourcePath = '/v1/api/AddConsignPreference';
+        $resourcePath = '/AddConsignPreference';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -636,7 +642,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -647,16 +653,15 @@ class OpenApiApi
      *
      * 指定物流服务上传包裹
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddPackageRequest $add_package_request addPackageRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\AddPackageResponses
      */
-    public function addPackage($authorization, $add_package_request)
+    public function addPackage($add_package_request)
     {
-        list($response) = $this->addPackageWithHttpInfo($authorization, $add_package_request);
+        list($response) = $this->addPackageWithHttpInfo($add_package_request);
         return $response;
     }
 
@@ -665,17 +670,16 @@ class OpenApiApi
      *
      * 指定物流服务上传包裹
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddPackageRequest $add_package_request addPackageRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\AddPackageResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addPackageWithHttpInfo($authorization, $add_package_request)
+    public function addPackageWithHttpInfo($add_package_request)
     {
         $returnType = '\Swagger\Client\Model\AddPackageResponses';
-        $request = $this->addPackageRequest($authorization, $add_package_request);
+        $request = $this->addPackageRequest($add_package_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -821,15 +825,15 @@ class OpenApiApi
     /**
      * Create request for operation 'addPackage'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddPackageRequest $add_package_request addPackageRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function addPackageRequest($authorization, $add_package_request)
+    protected function addPackageRequest($add_package_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling addPackage'
@@ -842,7 +846,7 @@ class OpenApiApi
             );
         }
 
-        $resourcePath = '/v1/api/AddPackage';
+        $resourcePath = '/AddPackage';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -916,7 +920,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -1196,7 +1200,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -1476,7 +1480,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -1756,7 +1760,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -2036,7 +2040,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -2316,7 +2320,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -2333,9 +2337,9 @@ class OpenApiApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\FetchTokenResponses
      */
-    public function fetchToken($authorization)
+    public function fetchToken($url,$devId,$secret)
     {
-        list($response) = $this->fetchTokenWithHttpInfo($authorization);
+        list($response) = $this->fetchTokenWithHttpInfo($url,$devId,$secret);
         return $response;
     }
 
@@ -2350,10 +2354,10 @@ class OpenApiApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\FetchTokenResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function fetchTokenWithHttpInfo($authorization)
+    public function fetchTokenWithHttpInfo($url,$devId,$secret)
     {
         $returnType = '\Swagger\Client\Model\FetchTokenResponses';
-        $request = $this->fetchTokenRequest($authorization);
+        $request = $this->fetchTokenRequest($url,$devId,$secret);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2502,22 +2506,34 @@ class OpenApiApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function fetchTokenRequest($authorization)
+    protected function fetchTokenRequest($url,$devId,$secret)
     {
         // verify the required parameter 'authorization' is set
-        if ($authorization === null) {
+        if ($url === null) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $authorization when calling fetchToken'
+                'Missing the required parameter $url when calling fetchToken'
             );
         }
+        if ($devId === null) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $devId when calling fetchToken'
+                );
+        }
+        if ($secret === null) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $secret when calling fetchToken'
+                );
+        }
 
-        $resourcePath = '/v1/api/FetchToken';
+        $resourcePath = '/FetchToken';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
+        $authorization="Basic ".base64_encode("$devId:$secret");
+        
         // header params
         if ($authorization !== null) {
             $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
@@ -2582,7 +2598,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -2862,7 +2878,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -2880,9 +2896,9 @@ class OpenApiApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\GetAddressPreferenceListResponses
      */
-    public function getAddressPreferenceList($authorization, $request)
+    public function getAddressPreferenceList($request)
     {
-        list($response) = $this->getAddressPreferenceListWithHttpInfo($authorization, $request);
+        list($response) = $this->getAddressPreferenceListWithHttpInfo($request);
         return $response;
     }
 
@@ -2891,18 +2907,17 @@ class OpenApiApi
      *
      * 获取地址信息列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetAddressPreferenceListRequest $request request (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\GetAddressPreferenceListResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAddressPreferenceListWithHttpInfo($authorization, $request)
+    public function getAddressPreferenceListWithHttpInfo($request)
     {
         $returnType = '\Swagger\Client\Model\GetAddressPreferenceListResponses';
-        $request = $this->getAddressPreferenceListRequest($authorization, $request);
-
+        $request = $this->getAddressPreferenceListRequest($request);
+        
         try {
             $options = $this->createHttpClientOption();
             try {
@@ -2941,6 +2956,7 @@ class OpenApiApi
                 }
             }
 
+     
             return [
                 ObjectSerializer::deserialize($content, $returnType, []),
                 $response->getStatusCode(),
@@ -3053,8 +3069,9 @@ class OpenApiApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAddressPreferenceListRequest($authorization, $request)
+    protected function getAddressPreferenceListRequest($request)
     {
+        $authorization=$this->authorization;
         // verify the required parameter 'authorization' is set
         if ($authorization === null) {
             throw new \InvalidArgumentException(
@@ -3068,7 +3085,7 @@ class OpenApiApi
             );
         }
 
-        $resourcePath = '/v1/api/GetAddressPreferenceList';
+        $resourcePath = '/GetAddressPreferenceList';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3142,7 +3159,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -3422,7 +3439,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -3702,7 +3719,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -3982,7 +3999,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -4262,7 +4279,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -4542,7 +4559,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -4822,7 +4839,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -5102,7 +5119,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -5382,7 +5399,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -5662,7 +5679,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -5942,7 +5959,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -6222,7 +6239,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -6502,7 +6519,7 @@ class OpenApiApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->url . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );

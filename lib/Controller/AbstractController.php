@@ -1,40 +1,13 @@
 <?php
 namespace Swagger\Client\Controller;
 
-use Swagger\Client\Api\OpenApiApi;
+use Swagger\Client\ApiException;
 
 class AbstractController
 {
-    function fetchToken(){
-        $api=new OpenApiApi();
-        $authorization="Basic ".base64_encode('56368199:b5b4acbb5b204d84b5a5f44442c8f4805636');
-        $accessToken=$api->fetchToken($authorization);
-        return $accessToken->getToken();
-    }
     
-    function getAccessToken($flag=true){
-        session_start();
-        if(!empty($_SESSION['token'] && $flag)
-            && !empty($_SESSION['expire'])
-            && 31536000> time() - $_SESSION['expire']
-            ){
-                return 'Bearer '.$_SESSION['token'];
-        }else{
-            $token=$this->fetchToken();
-            $_SESSION['token']=$token;
-            $_SESSION['expire']=time();
-            return 'Bearer '.$token;
-        }
-    }
-    
-    function getMessage(\Exception $e){
-        $message=$e->getMessage();
-        echo $message;
-        if(strpos($message,'{')!==false && strpos($message,'}')!==false){
-            $jsonString=trim(strstr($message,'{'));
-            $error = json_decode($jsonString, true);
-            dump($error);
-        }
+    function getMessage(ApiException $e){
+        dump(json_decode($e->getResponseBody(),true));
     }
     
     function show($template,$vars=array()){

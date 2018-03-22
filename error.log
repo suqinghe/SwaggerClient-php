@@ -685,3 +685,89 @@ Stack trace:
 #0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
 #1 {main}
   thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 91
+[22-Mar-2018 11:39:23 Asia/Shanghai] PHP Notice:  Undefined offset: 1 in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php on line 36
+[22-Mar-2018 11:41:22 Asia/Shanghai] PHP Notice:  Undefined offset: 1 in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php on line 37
+[22-Mar-2018 11:41:39 Asia/Shanghai] PHP Notice:  Undefined offset: 1 in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php on line 37
+[22-Mar-2018 11:43:27 Asia/Shanghai] PHP Fatal error:  Uncaught Swagger\Client\ApiException: [400] Client error: `POST https://sandbox.edisebay.com/v1/api/AddAddressPreference` resulted in a `400 Bad Request` response:
+{"status":{"resultCode":44020027,"message":"Invalid value for province","timestamp":1521690241463,"messageId":"11"},"dat (truncated...)
+ in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php:125
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php(99): Swagger\Client\Api\OpenApiApi->addAddressPreferenceWithHttpInfo('Bearer TGT-16-i...', Object(Swagger\Client\Model\AddAddressPreferenceRequest))
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddAddressPreference.php(39): Swagger\Client\Api\OpenApiApi->addAddressPreference('Bearer TGT-16-i...', Object(Swagger\Client\Model\AddAddressPreferenceRequest))
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(91): Swagger\Client\Controller\AddAddressPreference->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php on line 125
+[22-Mar-2018 11:44:55 Asia/Shanghai] PHP Notice:  Undefined offset: 1 in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php on line 37
+[22-Mar-2018 12:31:00 Asia/Shanghai] PHP Notice:  Undefined index: token in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php on line 19
+[22-Mar-2018 15:13:18 Asia/Shanghai] PHP Fatal error:  Uncaught InvalidArgumentException: json_decode error: Syntax error in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php:304
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php(32): GuzzleHttp\json_decode('<!DOCTYPE html>...', true)
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetAddressPreferenceList.php(37): Swagger\Client\Controller\AbstractController->getMessage(Object(Swagger\Client\ApiException))
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(91): Swagger\Client\Controller\GetAddressPreferenceList->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php on line 304
+[22-Mar-2018 15:14:55 Asia/Shanghai] PHP Notice:  Undefined variable: flag in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php on line 18
+[22-Mar-2018 15:14:55 Asia/Shanghai] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Swagger\Client\Api\OpenApiApi::__construct(), 0 passed in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php on line 11 and at least 2 expected in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php:72
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php(11): Swagger\Client\Api\OpenApiApi->__construct()
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php(24): Swagger\Client\Controller\AbstractController->fetchToken('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#2 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetAddressPreferenceList.php(23): Swagger\Client\Controller\AbstractController->getAccessToken('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#3 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(91): Swagger\Client\Controller\GetAddressPreferenceList->index()
+#4 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#5 { in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php on line 72
+[22-Mar-2018 15:15:07 Asia/Shanghai] PHP Fatal error:  Uncaught InvalidArgumentException: json_decode error: Syntax error in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php:304
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php(32): GuzzleHttp\json_decode('<!DOCTYPE html>...', true)
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetAddressPreferenceList.php(37): Swagger\Client\Controller\AbstractController->getMessage(Object(Swagger\Client\ApiException))
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(91): Swagger\Client\Controller\GetAddressPreferenceList->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php on line 304
+[22-Mar-2018 15:17:36 Asia/Shanghai] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Swagger\Client\Api\OpenApiApi::__construct(), 0 passed in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php on line 11 and at least 2 expected in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php:72
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php(11): Swagger\Client\Api\OpenApiApi->__construct()
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php(25): Swagger\Client\Controller\AbstractController->fetchToken('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#2 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetAddressPreferenceList.php(23): Swagger\Client\Controller\AbstractController->getAccessToken('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#3 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(91): Swagger\Client\Controller\GetAddressPreferenceList->index()
+#4 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#5 { in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php on line 72
+[22-Mar-2018 15:20:04 Asia/Shanghai] PHP Fatal error:  Uncaught InvalidArgumentException: json_decode error: Syntax error in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php:304
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php(33): GuzzleHttp\json_decode('<!DOCTYPE html>...', true)
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetAddressPreferenceList.php(37): Swagger\Client\Controller\AbstractController->getMessage(Object(Swagger\Client\ApiException))
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(91): Swagger\Client\Controller\GetAddressPreferenceList->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php on line 304
+[22-Mar-2018 15:20:29 Asia/Shanghai] PHP Fatal error:  Uncaught InvalidArgumentException: json_decode error: Syntax error in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php:304
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php(33): GuzzleHttp\json_decode('<!DOCTYPE html>...', true)
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetAddressPreferenceList.php(37): Swagger\Client\Controller\AbstractController->getMessage(Object(Swagger\Client\ApiException))
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(91): Swagger\Client\Controller\GetAddressPreferenceList->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php on line 304
+[22-Mar-2018 15:41:00 Asia/Shanghai] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Swagger\Client\Controller\AbstractController::getAccessToken(), 0 passed in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddAddressPreference.php on line 21 and exactly 3 expected in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php:16
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddAddressPreference.php(21): Swagger\Client\Controller\AbstractController->getAccessToken()
+#1 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(91): Swagger\Client\Controller\AddAddressPreference->index()
+#2 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#3 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AbstractController.php on line 16
+[22-Mar-2018 15:59:27 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\Index, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\FetchToken.php on line 23
+[22-Mar-2018 16:09:49 Asia/Shanghai] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Swagger\Client\Api\OpenApiApi::addAddressPreferenceRequest(), 1 passed in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php on line 125 and exactly 2 expected in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php:277
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php(125): Swagger\Client\Api\OpenApiApi->addAddressPreferenceRequest(Object(Swagger\Client\Model\AddAddressPreferenceRequest))
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php(107): Swagger\Client\Api\OpenApiApi->addAddressPreferenceWithHttpInfo(Object(Swagger\Client\Model\AddAddressPreferenceRequest))
+#2 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddAddressPreference.php(42): Swagger\Client\Api\OpenApiApi->addAddressPreference(Object(Swagger\Client\Model\AddAddressPreferenceRequest))
+#3 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(91): Swagger\Client\Controller\AddAddressPreference->index()
+#4 D:\wwwroot\ebay\SwaggerClient-php\index.php( in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php on line 277
+[22-Mar-2018 16:10:43 Asia/Shanghai] PHP Notice:  Undefined property: Swagger\Client\Configuration::$host in D:\wwwroot\ebay\SwaggerClient-php\lib\Configuration.php on line 265
+[22-Mar-2018 17:42:20 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\ShipToAddressRequest::setName() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddPackage.php:35
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(91): Swagger\Client\Controller\AddPackage->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddPackage.php on line 35

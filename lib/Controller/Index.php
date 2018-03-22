@@ -1,7 +1,6 @@
 <?php
 namespace Swagger\Client\Controller;
 
-use Swagger\Client\Api\OpenApiApi;
 
 class Index extends AbstractController
 {
@@ -20,13 +19,6 @@ class Index extends AbstractController
                ];
            }
            $this->show('index.php',['data'=>$data]);
-    }
-    
-    function getToken (){
-        $api=new OpenApiApi();
-        $authorization="Basic ".base64_encode('56368199:b5b4acbb5b204d84b5a5f44442c8f4805636');
-        $accessToken=$api->fetchToken($authorization);
-        dump($accessToken);
     }
     
     function getTitle($string){
