@@ -680,3 +680,8 @@ Stack trace:
 #3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
 #4 {main}
   thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\OpenApiApi.php on line 125
+[22-Mar-2018 11:22:13 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Controller\Index::index1() in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php:91
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
+#1 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 91
