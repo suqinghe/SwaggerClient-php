@@ -10,6 +10,7 @@ date_default_timezone_set('Asia/Shanghai');
 
 require './vendor/autoload.php';
 
+
 function dump($var, $echo=true, $label=null, $strict=true) {
     $label = ($label === null) ? '' : rtrim($label) . ' ';
     if (!$strict) {
@@ -62,9 +63,13 @@ spl_autoload_register(function ($class)
         exit;
     }
 });
-
+$pathInfo="";
 if(isset($_SERVER['PATH_INFO']) && !empty($_SERVER['PATH_INFO'])){
     $pathInfo=explode('/',trim($_SERVER['PATH_INFO'],'/'));
+}elseif(isset($_SERVER['REQUEST_URI']) && !empty($_SERVER['REQUEST_URI'])){
+	$pathInfo=explode('/',trim(str_replace('/index.php','',$_SERVER['REQUEST_URI']),'/'));
+}
+if($pathInfo && is_array($pathInfo) && count($pathInfo)>0){
     if(count($pathInfo)==1){
         $controller=trim($pathInfo[0]);
         $action='index';
@@ -72,11 +77,11 @@ if(isset($_SERVER['PATH_INFO']) && !empty($_SERVER['PATH_INFO'])){
         $controller=ucfirst(trim($pathInfo[0]));
         $action=trim($pathInfo[1]);
     }
-    
 }else{
     $controller='Index';
     $action=trim('index');
 }
+
 
 
 
