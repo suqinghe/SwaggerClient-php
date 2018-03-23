@@ -771,3 +771,21 @@ Stack trace:
 #1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
 #2 {main}
   thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddPackage.php on line 35
+[23-Mar-2018 09:15:55 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Class 'Swagger\Client\Controller\favicon.ico' not found in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php:90
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
+#1 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 90
+[23-Mar-2018 09:15:55 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Class 'Swagger\Client\Controller\favicon.ico' not found in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php:90
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
+#1 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 90
+[23-Mar-2018 09:27:31 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined function dump() in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php:61
+Stack trace:
+#0 [internal function]: {closure}('Swagger\\Client\\...')
+#1 [internal function]: spl_autoload_call('Swagger\\Client\\...')
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(92): class_exists('Swagger\\Client\\...')
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 61

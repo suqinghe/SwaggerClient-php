@@ -58,7 +58,7 @@ spl_autoload_register(function ($class)
     if (file_exists($file)) {
         require $file;
     }else{
-        dump($file);
+        throw new Exception($class.' not find.');
         exit;
     }
 });
@@ -87,5 +87,12 @@ if(isset($_GET['c'])){
     $controller=ucfirst(trim($_GET['c']));
 }
 $className='Swagger\\Client\\Controller'.'\\'.$controller;
+
+try {
+    class_exists($className);
+} catch (Exception $e) {
+    $className='Swagger\\Client\\Controller\\Index';
+}
 $obj=new  $className();
 $obj->$action();
+
