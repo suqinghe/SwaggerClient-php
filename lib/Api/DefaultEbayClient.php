@@ -77,10 +77,26 @@ class DefaultEbayClient
         HeaderSelector $selector = null
     ) {
         $this->url = $Url;
-        $this->authorization= $Authorization;
+        $this->authorization= "Bearer ".$Authorization;
         $this->client = $client ?: new Client();
         $this->config = $config ?: new Configuration();
         $this->headerSelector = $selector ?: new HeaderSelector();
+    }
+    
+    /**
+     * 
+     * @param Swagger\Client\Model\ModelInterface $request
+     */
+    public function execute($request){
+        $ref=new \ReflectionClass($request);
+        $className=preg_replace([
+            '/Request$/'
+        ], [
+            ''
+        ], $ref->getShortName());
+        
+        $methodName=lcfirst($className);
+        return $this->$methodName($request);
     }
 
     /**

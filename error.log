@@ -789,3 +789,24 @@ Stack trace:
 #3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
 #4 {main}
   thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 61
+[23-Mar-2018 11:18:51 Asia/Shanghai] PHP Warning:  preg_replace_callback_array() expects parameter 3 to be integer, string given in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:20:35 Asia/Shanghai] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:24:37 Asia/Shanghai] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:24:38 Asia/Shanghai] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:24:39 Asia/Shanghai] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:24:39 Asia/Shanghai] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:24:39 Asia/Shanghai] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:24:39 Asia/Shanghai] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:24:39 Asia/Shanghai] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:24:39 Asia/Shanghai] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:24:39 Asia/Shanghai] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:24:39 Asia/Shanghai] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 98
+[23-Mar-2018 11:31:50 Asia/Shanghai] PHP Notice:  Undefined variable: 1 in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 99
+[23-Mar-2018 11:34:04 Asia/Shanghai] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Swagger\Client\Api\DefaultEbayClient::getAddressPreferenceList(), 0 passed in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 99 and exactly 1 expected in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php:2915
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php(99): Swagger\Client\Api\DefaultEbayClient->getAddressPreferenceList()
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetAddressPreferenceList.php(33): Swagger\Client\Api\DefaultEbayClient->execute(Object(Swagger\Client\Model\GetAddressPreferenceListRequest))
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\GetAddressPreferenceList->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 2915

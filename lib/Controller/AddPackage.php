@@ -52,7 +52,8 @@ class AddPackage
             $data->setPackageHeight(100);
             $data->setConsignPreferenceId(14);
             $req->setData($data);
-            $rep =$client->addPackage($req);
+            
+            $rep =$client->execute($req);
             
             $result=$rep->getData()->getPackageId();
             dump($result);

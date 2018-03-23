@@ -18,7 +18,7 @@ class AddConsignPreference extends AbstractController
     function index(){
         try {
             $url='https://sandbox.edisebay.com/v1/api';
-            $authorization="Bearer TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
+            $authorization="TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
             $client = new DefaultEbayClient($url,$authorization);
             
             $req= new AddConsignPreferenceRequest();
@@ -41,7 +41,7 @@ class AddConsignPreference extends AbstractController
             $pickup_address->setPostcode('20000');
             $data->setPickupAddress($pickup_address);
             $req->setData($data);
-            $rep =$client->addConsignPreference($req);
+            $rep =$client->execute($req);
             
             $result=$rep->getData()->getConsignPreferenceId();
             dump($result);

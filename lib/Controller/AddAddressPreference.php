@@ -17,7 +17,7 @@ class AddAddressPreference
         try {
             
             $url='https://sandbox.edisebay.com/v1/api';
-            $authorization="Bearer TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
+            $authorization="TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
             $client = new DefaultEbayClient($url,$authorization);
             
             
@@ -38,7 +38,7 @@ class AddAddressPreference
             $data->setProvince('360000');//江西
             $req->setData($data);
             
-            $rep =$client->addAddressPreference($req);
+            $rep =$client->execute($req);
             dump($rep->getData()->getAddressId());
             
         } catch (ApiException $e) {

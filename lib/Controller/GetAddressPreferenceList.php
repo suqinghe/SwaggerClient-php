@@ -19,7 +19,7 @@ class GetAddressPreferenceList
         try {
  
             $url='https://sandbox.edisebay.com/v1/api';
-            $authorization="Bearer TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
+            $authorization="TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
             $client = new DefaultEbayClient($url,$authorization);
             
             $req= new GetAddressPreferenceListRequest();
@@ -30,13 +30,9 @@ class GetAddressPreferenceList
             $data->setPageSize(50);
             $data->setPageNumber(1);
             $req->setData($data);
-            $rep =$client->getAddressPreferenceList($req);
-            
-            
+            $rep =$client->execute($req);
             $result=$rep->getData()->getAddressList();
             dump($result);
-            
-            
         } catch (ApiException $e) {
             dump(json_decode($e->getResponseBody(),true));
         }
