@@ -9,6 +9,7 @@ use Swagger\Client\Model\AddPackageRequest;
 use Swagger\Client\Model\PackageInfoRequest;
 use Swagger\Client\Model\ShipToAddressRequest;
 use Swagger\Client\Model\ItemRequest;
+use Swagger\Client\Model\SkuRequest;
 
 /**
  * @desc 指定物流服务上传包裹
@@ -21,7 +22,7 @@ class AddPackage
         try {
  
             $url='https://sandbox.edisebay.com/v1/api';
-            $authorization="Bearer TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
+            $authorization="TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
             $client = new DefaultEbayClient($url,$authorization);
             
             $req= new AddPackageRequest();
@@ -41,9 +42,27 @@ class AddPackage
             $ship_to_address->setPostcode('20000');
             $data->setShipToAddress($ship_to_address);
             $item_list=new ItemRequest();
-            $item_list->setItemId(1);
-            $item_list->setTransactionId(1);
+            $item_list->setItemId('1234');
+            $item_list->setTransactionId('1234567890');//
+            $item_list->setOrderLineItem('1234');
+            $item_list->setSoldQty(1);
+            $item_list->setSoldPrice(1);
+            $item_list->setSoldDate('2017-10-12T08:08:04+0800');
+            $item_list->setPostedQty(1);
+            $item_list->setPaymentDate('2017-10-12T08:08:04+0800');
+            $item_list->setOrderLineItem(1);
+            $item_list->setBuyerId(1);
+            $sku=new SkuRequest();
+            $sku->setWeight(1);
+            $sku->setPrice(1);
+            $sku->setOrigin('CN');
+            $sku->setNameEn('demo');
+            $sku->setNameZh('测试');
+            $sku->setIsLiBattery(false);
+            $item_list->setSku($sku);
+            
             $data->setItemList([$item_list]);
+            
             $data->setShipFromAddressId(24);
             $data->setServiceId(1111);
             $data->setPackageWidth(100);

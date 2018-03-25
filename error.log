@@ -810,3 +810,108 @@ Stack trace:
 #3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
 #4 {main}
   thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 2915
+[25-Mar-2018 16:56:16 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Class 'Swagger\Client\Controller\favicon.ico' not found in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php:101
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
+#1 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 101
+[25-Mar-2018 16:56:16 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Class 'Swagger\Client\Controller\favicon.ico' not found in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php:101
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
+#1 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 101
+[25-Mar-2018 17:36:01 Asia/Shanghai] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Swagger\Client\Api\DefaultEbayClient::getConsignPreferenceListRequest(), 1 passed in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 3215 and exactly 2 expected in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php:3367
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php(3215): Swagger\Client\Api\DefaultEbayClient->getConsignPreferenceListRequest(Object(Swagger\Client\Model\GetConsignPreferenceListRequest))
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php(3197): Swagger\Client\Api\DefaultEbayClient->getConsignPreferenceListWithHttpInfo(Object(Swagger\Client\Model\GetConsignPreferenceListRequest))
+#2 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php(99): Swagger\Client\Api\DefaultEbayClient->getConsignPreferenceList(Object(Swagger\Client\Model\GetConsignPreferenceListRequest))
+#3 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetConsignPreferenceList.php( in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 3367
+[25-Mar-2018 17:41:25 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\GetConsignPreferenceListResponses::getConsignPreferenceList() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetConsignPreferenceList.php:40
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\GetConsignPreferenceList->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetConsignPreferenceList.php on line 40
+[25-Mar-2018 18:28:32 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 20
+[25-Mar-2018 19:26:33 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 20
+[25-Mar-2018 19:26:55 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:27:50 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:27:51 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:27:52 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:27:52 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:27:52 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:27:52 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:27:52 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:27:52 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:27:52 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:27:52 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:28:03 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:28:17 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:28:18 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:28:51 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\GetConsignPreferenceList, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetDropoffSiteList.php on line 16
+[25-Mar-2018 19:44:26 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\UpdateAddressPreferenceRequestData::setType() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateAddressPreference.php:32
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\UpdateAddressPreference->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateAddressPreference.php on line 32
+[25-Mar-2018 19:49:03 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\UpdateConsignPreferenceRequestData::setStreet1() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php:34
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\UpdateConsignPreference->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php on line 34
+[25-Mar-2018 19:49:11 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\UpdateConsignPreferenceRequestData::setProvince() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php:35
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\UpdateConsignPreference->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php on line 35
+[25-Mar-2018 19:49:23 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\UpdateConsignPreferenceRequestData::setCity() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php:35
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\UpdateConsignPreference->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php on line 35
+[25-Mar-2018 19:49:29 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\UpdateConsignPreferenceRequestData::setDistrict() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php:35
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\UpdateConsignPreference->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php on line 35
+[25-Mar-2018 19:49:31 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\UpdateConsignPreferenceRequestData::setDistrict() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php:35
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\UpdateConsignPreference->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php on line 35
+[25-Mar-2018 19:49:35 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\UpdateConsignPreferenceRequestData::setMobile() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php:35
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\UpdateConsignPreference->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php on line 35
+[25-Mar-2018 19:49:41 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\UpdateConsignPreferenceRequestData::setCountryCode() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php:35
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\UpdateConsignPreference->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php on line 35
+[25-Mar-2018 19:49:45 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\UpdateConsignPreferenceRequestData::setContact() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php:35
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\UpdateConsignPreference->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php on line 35
+[25-Mar-2018 19:49:48 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\UpdateConsignPreferenceRequestData::setPostcode() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php:35
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\UpdateConsignPreference->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php on line 35
+[25-Mar-2018 20:05:19 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\PickupAddressRequest::setStreet4() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php:42
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\UpdateConsignPreference->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php on line 42

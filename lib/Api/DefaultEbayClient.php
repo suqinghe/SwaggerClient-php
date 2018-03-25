@@ -212,15 +212,14 @@ class DefaultEbayClient
      *
      * 新增地址信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddAddressPreferenceRequest $add_address_preference_request addAddressPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addAddressPreferenceAsync($authorization, $add_address_preference_request)
+    public function addAddressPreferenceAsync($add_address_preference_request)
     {
-        return $this->addAddressPreferenceAsyncWithHttpInfo($authorization, $add_address_preference_request)
+        return $this->addAddressPreferenceAsyncWithHttpInfo($add_address_preference_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -233,16 +232,15 @@ class DefaultEbayClient
      *
      * 新增地址信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddAddressPreferenceRequest $add_address_preference_request addAddressPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addAddressPreferenceAsyncWithHttpInfo($authorization, $add_address_preference_request)
+    public function addAddressPreferenceAsyncWithHttpInfo($add_address_preference_request)
     {
         $returnType = '\Swagger\Client\Model\AddAddressPreferenceResponses';
-        $request = $this->addAddressPreferenceRequest($authorization, $add_address_preference_request);
+        $request = $this->addAddressPreferenceRequest($add_address_preference_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -284,7 +282,6 @@ class DefaultEbayClient
     /**
      * Create request for operation 'addAddressPreference'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddAddressPreferenceRequest $add_address_preference_request addAddressPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
@@ -491,15 +488,14 @@ class DefaultEbayClient
      *
      * 新增交运偏好
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddConsignPreferenceRequest $add_consign_preference_request addConsignPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addConsignPreferenceAsync($authorization, $add_consign_preference_request)
+    public function addConsignPreferenceAsync($add_consign_preference_request)
     {
-        return $this->addConsignPreferenceAsyncWithHttpInfo($authorization, $add_consign_preference_request)
+        return $this->addConsignPreferenceAsyncWithHttpInfo($add_consign_preference_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -512,16 +508,15 @@ class DefaultEbayClient
      *
      * 新增交运偏好
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddConsignPreferenceRequest $add_consign_preference_request addConsignPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addConsignPreferenceAsyncWithHttpInfo($authorization, $add_consign_preference_request)
+    public function addConsignPreferenceAsyncWithHttpInfo($add_consign_preference_request)
     {
         $returnType = '\Swagger\Client\Model\AddConsignPreferenceResponses';
-        $request = $this->addConsignPreferenceRequest($authorization, $add_consign_preference_request);
+        $request = $this->addConsignPreferenceRequest($add_consign_preference_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -769,15 +764,14 @@ class DefaultEbayClient
      *
      * 指定物流服务上传包裹
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddPackageRequest $add_package_request addPackageRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addPackageAsync($authorization, $add_package_request)
+    public function addPackageAsync($add_package_request)
     {
-        return $this->addPackageAsyncWithHttpInfo($authorization, $add_package_request)
+        return $this->addPackageAsyncWithHttpInfo($add_package_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -790,16 +784,15 @@ class DefaultEbayClient
      *
      * 指定物流服务上传包裹
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddPackageRequest $add_package_request addPackageRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addPackageAsyncWithHttpInfo($authorization, $add_package_request)
+    public function addPackageAsyncWithHttpInfo($add_package_request)
     {
         $returnType = '\Swagger\Client\Model\AddPackageResponses';
-        $request = $this->addPackageRequest($authorization, $add_package_request);
+        $request = $this->addPackageRequest($add_package_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -947,16 +940,15 @@ class DefaultEbayClient
      *
      * 无指定物流服务上传包裹
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddPackageWithoutServiceRequest $add_package_without_service_request addPackageWithoutServiceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\AddPackageWithoutServiceResponses
      */
-    public function addPackageWithoutService($authorization, $add_package_without_service_request)
+    public function addPackageWithoutService($add_package_without_service_request)
     {
-        list($response) = $this->addPackageWithoutServiceWithHttpInfo($authorization, $add_package_without_service_request);
+        list($response) = $this->addPackageWithoutServiceWithHttpInfo($add_package_without_service_request);
         return $response;
     }
 
@@ -965,17 +957,16 @@ class DefaultEbayClient
      *
      * 无指定物流服务上传包裹
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddPackageWithoutServiceRequest $add_package_without_service_request addPackageWithoutServiceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\AddPackageWithoutServiceResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addPackageWithoutServiceWithHttpInfo($authorization, $add_package_without_service_request)
+    public function addPackageWithoutServiceWithHttpInfo($add_package_without_service_request)
     {
         $returnType = '\Swagger\Client\Model\AddPackageWithoutServiceResponses';
-        $request = $this->addPackageWithoutServiceRequest($authorization, $add_package_without_service_request);
+        $request = $this->addPackageWithoutServiceRequest($add_package_without_service_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1049,15 +1040,14 @@ class DefaultEbayClient
      *
      * 无指定物流服务上传包裹
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddPackageWithoutServiceRequest $add_package_without_service_request addPackageWithoutServiceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addPackageWithoutServiceAsync($authorization, $add_package_without_service_request)
+    public function addPackageWithoutServiceAsync($add_package_without_service_request)
     {
-        return $this->addPackageWithoutServiceAsyncWithHttpInfo($authorization, $add_package_without_service_request)
+        return $this->addPackageWithoutServiceAsyncWithHttpInfo($add_package_without_service_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1070,16 +1060,15 @@ class DefaultEbayClient
      *
      * 无指定物流服务上传包裹
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddPackageWithoutServiceRequest $add_package_without_service_request addPackageWithoutServiceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addPackageWithoutServiceAsyncWithHttpInfo($authorization, $add_package_without_service_request)
+    public function addPackageWithoutServiceAsyncWithHttpInfo($add_package_without_service_request)
     {
         $returnType = '\Swagger\Client\Model\AddPackageWithoutServiceResponses';
-        $request = $this->addPackageWithoutServiceRequest($authorization, $add_package_without_service_request);
+        $request = $this->addPackageWithoutServiceRequest($add_package_without_service_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1121,15 +1110,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'addPackageWithoutService'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AddPackageWithoutServiceRequest $add_package_without_service_request addPackageWithoutServiceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function addPackageWithoutServiceRequest($authorization, $add_package_without_service_request)
+    protected function addPackageWithoutServiceRequest($add_package_without_service_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling addPackageWithoutService'
@@ -1142,7 +1131,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/AddPackageWithoutService';
+        $resourcePath = '/AddPackageWithoutService';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1227,16 +1216,15 @@ class DefaultEbayClient
      *
      * 指定包裹物流服务
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AssignServiceRequest $assign_service_request assignServiceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\AssignServiceResponses
      */
-    public function assignService($authorization, $assign_service_request)
+    public function assignService($assign_service_request)
     {
-        list($response) = $this->assignServiceWithHttpInfo($authorization, $assign_service_request);
+        list($response) = $this->assignServiceWithHttpInfo($assign_service_request);
         return $response;
     }
 
@@ -1245,17 +1233,16 @@ class DefaultEbayClient
      *
      * 指定包裹物流服务
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AssignServiceRequest $assign_service_request assignServiceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\AssignServiceResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function assignServiceWithHttpInfo($authorization, $assign_service_request)
+    public function assignServiceWithHttpInfo($assign_service_request)
     {
         $returnType = '\Swagger\Client\Model\AssignServiceResponses';
-        $request = $this->assignServiceRequest($authorization, $assign_service_request);
+        $request = $this->assignServiceRequest($assign_service_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1329,15 +1316,14 @@ class DefaultEbayClient
      *
      * 指定包裹物流服务
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AssignServiceRequest $assign_service_request assignServiceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function assignServiceAsync($authorization, $assign_service_request)
+    public function assignServiceAsync($assign_service_request)
     {
-        return $this->assignServiceAsyncWithHttpInfo($authorization, $assign_service_request)
+        return $this->assignServiceAsyncWithHttpInfo($assign_service_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1350,16 +1336,15 @@ class DefaultEbayClient
      *
      * 指定包裹物流服务
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AssignServiceRequest $assign_service_request assignServiceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function assignServiceAsyncWithHttpInfo($authorization, $assign_service_request)
+    public function assignServiceAsyncWithHttpInfo($assign_service_request)
     {
         $returnType = '\Swagger\Client\Model\AssignServiceResponses';
-        $request = $this->assignServiceRequest($authorization, $assign_service_request);
+        $request = $this->assignServiceRequest($assign_service_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1401,15 +1386,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'assignService'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\AssignServiceRequest $assign_service_request assignServiceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function assignServiceRequest($authorization, $assign_service_request)
+    protected function assignServiceRequest($assign_service_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling assignService'
@@ -1422,7 +1407,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/AssignService';
+        $resourcePath = '/AssignService';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1507,16 +1492,15 @@ class DefaultEbayClient
      *
      * 取消包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\CancelPackagesRequest $cancel_packages_request cancelPackagesRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\CancelPackagesResponses
      */
-    public function cancelPackages($authorization, $cancel_packages_request)
+    public function cancelPackages($cancel_packages_request)
     {
-        list($response) = $this->cancelPackagesWithHttpInfo($authorization, $cancel_packages_request);
+        list($response) = $this->cancelPackagesWithHttpInfo($cancel_packages_request);
         return $response;
     }
 
@@ -1525,17 +1509,16 @@ class DefaultEbayClient
      *
      * 取消包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\CancelPackagesRequest $cancel_packages_request cancelPackagesRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\CancelPackagesResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cancelPackagesWithHttpInfo($authorization, $cancel_packages_request)
+    public function cancelPackagesWithHttpInfo($cancel_packages_request)
     {
         $returnType = '\Swagger\Client\Model\CancelPackagesResponses';
-        $request = $this->cancelPackagesRequest($authorization, $cancel_packages_request);
+        $request = $this->cancelPackagesRequest($cancel_packages_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1609,15 +1592,14 @@ class DefaultEbayClient
      *
      * 取消包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\CancelPackagesRequest $cancel_packages_request cancelPackagesRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelPackagesAsync($authorization, $cancel_packages_request)
+    public function cancelPackagesAsync($cancel_packages_request)
     {
-        return $this->cancelPackagesAsyncWithHttpInfo($authorization, $cancel_packages_request)
+        return $this->cancelPackagesAsyncWithHttpInfo($cancel_packages_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1630,16 +1612,15 @@ class DefaultEbayClient
      *
      * 取消包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\CancelPackagesRequest $cancel_packages_request cancelPackagesRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelPackagesAsyncWithHttpInfo($authorization, $cancel_packages_request)
+    public function cancelPackagesAsyncWithHttpInfo($cancel_packages_request)
     {
         $returnType = '\Swagger\Client\Model\CancelPackagesResponses';
-        $request = $this->cancelPackagesRequest($authorization, $cancel_packages_request);
+        $request = $this->cancelPackagesRequest($cancel_packages_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1681,15 +1662,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'cancelPackages'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\CancelPackagesRequest $cancel_packages_request cancelPackagesRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function cancelPackagesRequest($authorization, $cancel_packages_request)
+    protected function cancelPackagesRequest($cancel_packages_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling cancelPackages'
@@ -1702,7 +1683,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/CancelPackages';
+        $resourcePath = '/CancelPackages';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1787,16 +1768,15 @@ class DefaultEbayClient
      *
      * 确认并交运包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\ConfirmPackagesRequest $confirm_packages_request confirmPackagesRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\ConfirmPackagesResponses
      */
-    public function confirmPackages($authorization, $confirm_packages_request)
+    public function confirmPackages($confirm_packages_request)
     {
-        list($response) = $this->confirmPackagesWithHttpInfo($authorization, $confirm_packages_request);
+        list($response) = $this->confirmPackagesWithHttpInfo($confirm_packages_request);
         return $response;
     }
 
@@ -1805,17 +1785,16 @@ class DefaultEbayClient
      *
      * 确认并交运包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\ConfirmPackagesRequest $confirm_packages_request confirmPackagesRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ConfirmPackagesResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function confirmPackagesWithHttpInfo($authorization, $confirm_packages_request)
+    public function confirmPackagesWithHttpInfo($confirm_packages_request)
     {
         $returnType = '\Swagger\Client\Model\ConfirmPackagesResponses';
-        $request = $this->confirmPackagesRequest($authorization, $confirm_packages_request);
+        $request = $this->confirmPackagesRequest($confirm_packages_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1889,15 +1868,14 @@ class DefaultEbayClient
      *
      * 确认并交运包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\ConfirmPackagesRequest $confirm_packages_request confirmPackagesRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function confirmPackagesAsync($authorization, $confirm_packages_request)
+    public function confirmPackagesAsync($confirm_packages_request)
     {
-        return $this->confirmPackagesAsyncWithHttpInfo($authorization, $confirm_packages_request)
+        return $this->confirmPackagesAsyncWithHttpInfo($confirm_packages_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1910,16 +1888,15 @@ class DefaultEbayClient
      *
      * 确认并交运包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\ConfirmPackagesRequest $confirm_packages_request confirmPackagesRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function confirmPackagesAsyncWithHttpInfo($authorization, $confirm_packages_request)
+    public function confirmPackagesAsyncWithHttpInfo($confirm_packages_request)
     {
         $returnType = '\Swagger\Client\Model\ConfirmPackagesResponses';
-        $request = $this->confirmPackagesRequest($authorization, $confirm_packages_request);
+        $request = $this->confirmPackagesRequest($confirm_packages_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1961,15 +1938,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'confirmPackages'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\ConfirmPackagesRequest $confirm_packages_request confirmPackagesRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function confirmPackagesRequest($authorization, $confirm_packages_request)
+    protected function confirmPackagesRequest($confirm_packages_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling confirmPackages'
@@ -1982,7 +1959,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/ConfirmPackages';
+        $resourcePath = '/ConfirmPackages';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2067,16 +2044,15 @@ class DefaultEbayClient
      *
      * 删除包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\DeletePackagesRequest $cancel_packages_request cancelPackagesRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\DeletePackagesResponses
      */
-    public function deletePackages($authorization, $cancel_packages_request)
+    public function deletePackages($cancel_packages_request)
     {
-        list($response) = $this->deletePackagesWithHttpInfo($authorization, $cancel_packages_request);
+        list($response) = $this->deletePackagesWithHttpInfo($cancel_packages_request);
         return $response;
     }
 
@@ -2085,17 +2061,16 @@ class DefaultEbayClient
      *
      * 删除包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\DeletePackagesRequest $cancel_packages_request cancelPackagesRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\DeletePackagesResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deletePackagesWithHttpInfo($authorization, $cancel_packages_request)
+    public function deletePackagesWithHttpInfo($cancel_packages_request)
     {
         $returnType = '\Swagger\Client\Model\DeletePackagesResponses';
-        $request = $this->deletePackagesRequest($authorization, $cancel_packages_request);
+        $request = $this->deletePackagesRequest($cancel_packages_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2169,15 +2144,14 @@ class DefaultEbayClient
      *
      * 删除包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\DeletePackagesRequest $cancel_packages_request cancelPackagesRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deletePackagesAsync($authorization, $cancel_packages_request)
+    public function deletePackagesAsync($cancel_packages_request)
     {
-        return $this->deletePackagesAsyncWithHttpInfo($authorization, $cancel_packages_request)
+        return $this->deletePackagesAsyncWithHttpInfo($cancel_packages_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2190,16 +2164,15 @@ class DefaultEbayClient
      *
      * 删除包裹信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\DeletePackagesRequest $cancel_packages_request cancelPackagesRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deletePackagesAsyncWithHttpInfo($authorization, $cancel_packages_request)
+    public function deletePackagesAsyncWithHttpInfo($cancel_packages_request)
     {
         $returnType = '\Swagger\Client\Model\DeletePackagesResponses';
-        $request = $this->deletePackagesRequest($authorization, $cancel_packages_request);
+        $request = $this->deletePackagesRequest($cancel_packages_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2241,15 +2214,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'deletePackages'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\DeletePackagesRequest $cancel_packages_request cancelPackagesRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function deletePackagesRequest($authorization, $cancel_packages_request)
+    protected function deletePackagesRequest($cancel_packages_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling deletePackages'
@@ -2262,7 +2235,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/DeletePackages';
+        $resourcePath = '/DeletePackages';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2625,16 +2598,15 @@ class DefaultEbayClient
      *
      * 获取包裹实际运费
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetActualCostRequest $get_actual_cost_request getActualCostRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\GetActualCostResponses
      */
-    public function getActualCost($authorization, $get_actual_cost_request)
+    public function getActualCost($get_actual_cost_request)
     {
-        list($response) = $this->getActualCostWithHttpInfo($authorization, $get_actual_cost_request);
+        list($response) = $this->getActualCostWithHttpInfo($get_actual_cost_request);
         return $response;
     }
 
@@ -2643,17 +2615,16 @@ class DefaultEbayClient
      *
      * 获取包裹实际运费
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetActualCostRequest $get_actual_cost_request getActualCostRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\GetActualCostResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getActualCostWithHttpInfo($authorization, $get_actual_cost_request)
+    public function getActualCostWithHttpInfo($get_actual_cost_request)
     {
         $returnType = '\Swagger\Client\Model\GetActualCostResponses';
-        $request = $this->getActualCostRequest($authorization, $get_actual_cost_request);
+        $request = $this->getActualCostRequest($get_actual_cost_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2727,15 +2698,14 @@ class DefaultEbayClient
      *
      * 获取包裹实际运费
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetActualCostRequest $get_actual_cost_request getActualCostRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getActualCostAsync($authorization, $get_actual_cost_request)
+    public function getActualCostAsync($get_actual_cost_request)
     {
-        return $this->getActualCostAsyncWithHttpInfo($authorization, $get_actual_cost_request)
+        return $this->getActualCostAsyncWithHttpInfo($get_actual_cost_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2748,16 +2718,15 @@ class DefaultEbayClient
      *
      * 获取包裹实际运费
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetActualCostRequest $get_actual_cost_request getActualCostRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getActualCostAsyncWithHttpInfo($authorization, $get_actual_cost_request)
+    public function getActualCostAsyncWithHttpInfo($get_actual_cost_request)
     {
         $returnType = '\Swagger\Client\Model\GetActualCostResponses';
-        $request = $this->getActualCostRequest($authorization, $get_actual_cost_request);
+        $request = $this->getActualCostRequest($get_actual_cost_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2799,15 +2768,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'getActualCost'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetActualCostRequest $get_actual_cost_request getActualCostRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getActualCostRequest($authorization, $get_actual_cost_request)
+    protected function getActualCostRequest($get_actual_cost_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling getActualCost'
@@ -2820,7 +2789,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/GetActualCost';
+        $resourcePath = '/GetActualCost';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3007,15 +2976,14 @@ class DefaultEbayClient
      *
      * 获取地址信息列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetAddressPreferenceListRequest $request request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAddressPreferenceListAsync($authorization, $request)
+    public function getAddressPreferenceListAsync($request)
     {
-        return $this->getAddressPreferenceListAsyncWithHttpInfo($authorization, $request)
+        return $this->getAddressPreferenceListAsyncWithHttpInfo($request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3028,16 +2996,15 @@ class DefaultEbayClient
      *
      * 获取地址信息列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetAddressPreferenceListRequest $request request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAddressPreferenceListAsyncWithHttpInfo($authorization, $request)
+    public function getAddressPreferenceListAsyncWithHttpInfo($request)
     {
         $returnType = '\Swagger\Client\Model\GetAddressPreferenceListResponses';
-        $request = $this->getAddressPreferenceListRequest($authorization, $request);
+        $request = $this->getAddressPreferenceListRequest($request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3079,7 +3046,6 @@ class DefaultEbayClient
     /**
      * Create request for operation 'getAddressPreferenceList'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetAddressPreferenceListRequest $request request (required)
      *
      * @throws \InvalidArgumentException
@@ -3186,16 +3152,15 @@ class DefaultEbayClient
      *
      * 获取交运偏好列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetConsignPreferenceListRequest $get_consign_preference_list_request getConsignPreferenceListRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\GetConsignPreferenceListResponses
      */
-    public function getConsignPreferenceList($authorization, $get_consign_preference_list_request)
+    public function getConsignPreferenceList($get_consign_preference_list_request)
     {
-        list($response) = $this->getConsignPreferenceListWithHttpInfo($authorization, $get_consign_preference_list_request);
+        list($response) = $this->getConsignPreferenceListWithHttpInfo($get_consign_preference_list_request);
         return $response;
     }
 
@@ -3204,17 +3169,16 @@ class DefaultEbayClient
      *
      * 获取交运偏好列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetConsignPreferenceListRequest $get_consign_preference_list_request getConsignPreferenceListRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\GetConsignPreferenceListResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getConsignPreferenceListWithHttpInfo($authorization, $get_consign_preference_list_request)
+    public function getConsignPreferenceListWithHttpInfo($get_consign_preference_list_request)
     {
         $returnType = '\Swagger\Client\Model\GetConsignPreferenceListResponses';
-        $request = $this->getConsignPreferenceListRequest($authorization, $get_consign_preference_list_request);
+        $request = $this->getConsignPreferenceListRequest($get_consign_preference_list_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3288,15 +3252,14 @@ class DefaultEbayClient
      *
      * 获取交运偏好列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetConsignPreferenceListRequest $get_consign_preference_list_request getConsignPreferenceListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getConsignPreferenceListAsync($authorization, $get_consign_preference_list_request)
+    public function getConsignPreferenceListAsync($get_consign_preference_list_request)
     {
-        return $this->getConsignPreferenceListAsyncWithHttpInfo($authorization, $get_consign_preference_list_request)
+        return $this->getConsignPreferenceListAsyncWithHttpInfo($get_consign_preference_list_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3309,16 +3272,15 @@ class DefaultEbayClient
      *
      * 获取交运偏好列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetConsignPreferenceListRequest $get_consign_preference_list_request getConsignPreferenceListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getConsignPreferenceListAsyncWithHttpInfo($authorization, $get_consign_preference_list_request)
+    public function getConsignPreferenceListAsyncWithHttpInfo($get_consign_preference_list_request)
     {
         $returnType = '\Swagger\Client\Model\GetConsignPreferenceListResponses';
-        $request = $this->getConsignPreferenceListRequest($authorization, $get_consign_preference_list_request);
+        $request = $this->getConsignPreferenceListRequest($get_consign_preference_list_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3360,15 +3322,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'getConsignPreferenceList'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetConsignPreferenceListRequest $get_consign_preference_list_request getConsignPreferenceListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getConsignPreferenceListRequest($authorization, $get_consign_preference_list_request)
+    protected function getConsignPreferenceListRequest($get_consign_preference_list_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization= $this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling getConsignPreferenceList'
@@ -3381,7 +3343,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/GetConsignPreferenceList';
+        $resourcePath = '/GetConsignPreferenceList';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3466,16 +3428,15 @@ class DefaultEbayClient
      *
      * 获取自送站点列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetDropoffSiteListRequest $get_dropoff_site_list_request getDropoffSiteListRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\GetDropoffSiteListResponses
      */
-    public function getDropoffSiteList($authorization, $get_dropoff_site_list_request)
+    public function getDropoffSiteList($get_dropoff_site_list_request)
     {
-        list($response) = $this->getDropoffSiteListWithHttpInfo($authorization, $get_dropoff_site_list_request);
+        list($response) = $this->getDropoffSiteListWithHttpInfo($get_dropoff_site_list_request);
         return $response;
     }
 
@@ -3484,17 +3445,16 @@ class DefaultEbayClient
      *
      * 获取自送站点列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetDropoffSiteListRequest $get_dropoff_site_list_request getDropoffSiteListRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\GetDropoffSiteListResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDropoffSiteListWithHttpInfo($authorization, $get_dropoff_site_list_request)
+    public function getDropoffSiteListWithHttpInfo($get_dropoff_site_list_request)
     {
         $returnType = '\Swagger\Client\Model\GetDropoffSiteListResponses';
-        $request = $this->getDropoffSiteListRequest($authorization, $get_dropoff_site_list_request);
+        $request = $this->getDropoffSiteListRequest($get_dropoff_site_list_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3568,15 +3528,14 @@ class DefaultEbayClient
      *
      * 获取自送站点列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetDropoffSiteListRequest $get_dropoff_site_list_request getDropoffSiteListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDropoffSiteListAsync($authorization, $get_dropoff_site_list_request)
+    public function getDropoffSiteListAsync($get_dropoff_site_list_request)
     {
-        return $this->getDropoffSiteListAsyncWithHttpInfo($authorization, $get_dropoff_site_list_request)
+        return $this->getDropoffSiteListAsyncWithHttpInfo($get_dropoff_site_list_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3589,16 +3548,15 @@ class DefaultEbayClient
      *
      * 获取自送站点列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetDropoffSiteListRequest $get_dropoff_site_list_request getDropoffSiteListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDropoffSiteListAsyncWithHttpInfo($authorization, $get_dropoff_site_list_request)
+    public function getDropoffSiteListAsyncWithHttpInfo($get_dropoff_site_list_request)
     {
         $returnType = '\Swagger\Client\Model\GetDropoffSiteListResponses';
-        $request = $this->getDropoffSiteListRequest($authorization, $get_dropoff_site_list_request);
+        $request = $this->getDropoffSiteListRequest($get_dropoff_site_list_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3640,15 +3598,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'getDropoffSiteList'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetDropoffSiteListRequest $get_dropoff_site_list_request getDropoffSiteListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getDropoffSiteListRequest($authorization, $get_dropoff_site_list_request)
+    protected function getDropoffSiteListRequest($get_dropoff_site_list_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling getDropoffSiteList'
@@ -3661,7 +3619,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/GetDropoffSiteList';
+        $resourcePath = '/GetDropoffSiteList';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3746,16 +3704,15 @@ class DefaultEbayClient
      *
      * 获取交接单打印详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetHandoverSheetRequest $get_handover_sheet_request getHandoverSheetRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\GetHandoverSheetResponses
      */
-    public function getHandoverSheet($authorization, $get_handover_sheet_request)
+    public function getHandoverSheet($get_handover_sheet_request)
     {
-        list($response) = $this->getHandoverSheetWithHttpInfo($authorization, $get_handover_sheet_request);
+        list($response) = $this->getHandoverSheetWithHttpInfo($get_handover_sheet_request);
         return $response;
     }
 
@@ -3764,17 +3721,16 @@ class DefaultEbayClient
      *
      * 获取交接单打印详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetHandoverSheetRequest $get_handover_sheet_request getHandoverSheetRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\GetHandoverSheetResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getHandoverSheetWithHttpInfo($authorization, $get_handover_sheet_request)
+    public function getHandoverSheetWithHttpInfo($get_handover_sheet_request)
     {
         $returnType = '\Swagger\Client\Model\GetHandoverSheetResponses';
-        $request = $this->getHandoverSheetRequest($authorization, $get_handover_sheet_request);
+        $request = $this->getHandoverSheetRequest($get_handover_sheet_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3848,15 +3804,14 @@ class DefaultEbayClient
      *
      * 获取交接单打印详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetHandoverSheetRequest $get_handover_sheet_request getHandoverSheetRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getHandoverSheetAsync($authorization, $get_handover_sheet_request)
+    public function getHandoverSheetAsync($get_handover_sheet_request)
     {
-        return $this->getHandoverSheetAsyncWithHttpInfo($authorization, $get_handover_sheet_request)
+        return $this->getHandoverSheetAsyncWithHttpInfo($get_handover_sheet_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3869,16 +3824,15 @@ class DefaultEbayClient
      *
      * 获取交接单打印详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetHandoverSheetRequest $get_handover_sheet_request getHandoverSheetRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getHandoverSheetAsyncWithHttpInfo($authorization, $get_handover_sheet_request)
+    public function getHandoverSheetAsyncWithHttpInfo($get_handover_sheet_request)
     {
         $returnType = '\Swagger\Client\Model\GetHandoverSheetResponses';
-        $request = $this->getHandoverSheetRequest($authorization, $get_handover_sheet_request);
+        $request = $this->getHandoverSheetRequest($get_handover_sheet_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3920,15 +3874,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'getHandoverSheet'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetHandoverSheetRequest $get_handover_sheet_request getHandoverSheetRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getHandoverSheetRequest($authorization, $get_handover_sheet_request)
+    protected function getHandoverSheetRequest($get_handover_sheet_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling getHandoverSheet'
@@ -3941,7 +3895,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/GetHandoverSheet';
+        $resourcePath = '/GetHandoverSheet';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4026,16 +3980,15 @@ class DefaultEbayClient
      *
      * 查询物品包裹ID
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetItemPackageIdRequest $get_item_package_id_request getItemPackageIdRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\GetItemPackageIdResponses
      */
-    public function getItemPackageId($authorization, $get_item_package_id_request)
+    public function getItemPackageId($get_item_package_id_request)
     {
-        list($response) = $this->getItemPackageIdWithHttpInfo($authorization, $get_item_package_id_request);
+        list($response) = $this->getItemPackageIdWithHttpInfo($get_item_package_id_request);
         return $response;
     }
 
@@ -4044,17 +3997,16 @@ class DefaultEbayClient
      *
      * 查询物品包裹ID
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetItemPackageIdRequest $get_item_package_id_request getItemPackageIdRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\GetItemPackageIdResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getItemPackageIdWithHttpInfo($authorization, $get_item_package_id_request)
+    public function getItemPackageIdWithHttpInfo($get_item_package_id_request)
     {
         $returnType = '\Swagger\Client\Model\GetItemPackageIdResponses';
-        $request = $this->getItemPackageIdRequest($authorization, $get_item_package_id_request);
+        $request = $this->getItemPackageIdRequest($get_item_package_id_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4128,15 +4080,14 @@ class DefaultEbayClient
      *
      * 查询物品包裹ID
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetItemPackageIdRequest $get_item_package_id_request getItemPackageIdRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getItemPackageIdAsync($authorization, $get_item_package_id_request)
+    public function getItemPackageIdAsync($get_item_package_id_request)
     {
-        return $this->getItemPackageIdAsyncWithHttpInfo($authorization, $get_item_package_id_request)
+        return $this->getItemPackageIdAsyncWithHttpInfo($get_item_package_id_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4149,16 +4100,15 @@ class DefaultEbayClient
      *
      * 查询物品包裹ID
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetItemPackageIdRequest $get_item_package_id_request getItemPackageIdRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getItemPackageIdAsyncWithHttpInfo($authorization, $get_item_package_id_request)
+    public function getItemPackageIdAsyncWithHttpInfo($get_item_package_id_request)
     {
         $returnType = '\Swagger\Client\Model\GetItemPackageIdResponses';
-        $request = $this->getItemPackageIdRequest($authorization, $get_item_package_id_request);
+        $request = $this->getItemPackageIdRequest($get_item_package_id_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4200,15 +4150,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'getItemPackageId'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetItemPackageIdRequest $get_item_package_id_request getItemPackageIdRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getItemPackageIdRequest($authorization, $get_item_package_id_request)
+    protected function getItemPackageIdRequest($get_item_package_id_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling getItemPackageId'
@@ -4221,7 +4171,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/GetItemPackageId';
+        $resourcePath = '/GetItemPackageId';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4306,16 +4256,15 @@ class DefaultEbayClient
      *
      * 获取面单打印详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetLabelRequest $get_label_request getLabelRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\GetLabelResponses
      */
-    public function getLabel($authorization, $get_label_request)
+    public function getLabel($get_label_request)
     {
-        list($response) = $this->getLabelWithHttpInfo($authorization, $get_label_request);
+        list($response) = $this->getLabelWithHttpInfo($get_label_request);
         return $response;
     }
 
@@ -4324,17 +4273,16 @@ class DefaultEbayClient
      *
      * 获取面单打印详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetLabelRequest $get_label_request getLabelRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\GetLabelResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getLabelWithHttpInfo($authorization, $get_label_request)
+    public function getLabelWithHttpInfo($get_label_request)
     {
         $returnType = '\Swagger\Client\Model\GetLabelResponses';
-        $request = $this->getLabelRequest($authorization, $get_label_request);
+        $request = $this->getLabelRequest($get_label_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4408,15 +4356,14 @@ class DefaultEbayClient
      *
      * 获取面单打印详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetLabelRequest $get_label_request getLabelRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLabelAsync($authorization, $get_label_request)
+    public function getLabelAsync($get_label_request)
     {
-        return $this->getLabelAsyncWithHttpInfo($authorization, $get_label_request)
+        return $this->getLabelAsyncWithHttpInfo($get_label_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4429,16 +4376,15 @@ class DefaultEbayClient
      *
      * 获取面单打印详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetLabelRequest $get_label_request getLabelRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLabelAsyncWithHttpInfo($authorization, $get_label_request)
+    public function getLabelAsyncWithHttpInfo($get_label_request)
     {
         $returnType = '\Swagger\Client\Model\GetLabelResponses';
-        $request = $this->getLabelRequest($authorization, $get_label_request);
+        $request = $this->getLabelRequest($get_label_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4480,15 +4426,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'getLabel'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetLabelRequest $get_label_request getLabelRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getLabelRequest($authorization, $get_label_request)
+    protected function getLabelRequest($get_label_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling getLabel'
@@ -4501,7 +4447,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/GetLabel';
+        $resourcePath = '/GetLabel';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4586,16 +4532,15 @@ class DefaultEbayClient
      *
      * 获取包裹详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetPackageDetailRequest $get_package_detail_request getPackageDetailRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\GetPackageDetailResponses
      */
-    public function getPackageDetail($authorization, $get_package_detail_request)
+    public function getPackageDetail($get_package_detail_request)
     {
-        list($response) = $this->getPackageDetailWithHttpInfo($authorization, $get_package_detail_request);
+        list($response) = $this->getPackageDetailWithHttpInfo($get_package_detail_request);
         return $response;
     }
 
@@ -4604,17 +4549,16 @@ class DefaultEbayClient
      *
      * 获取包裹详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetPackageDetailRequest $get_package_detail_request getPackageDetailRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\GetPackageDetailResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPackageDetailWithHttpInfo($authorization, $get_package_detail_request)
+    public function getPackageDetailWithHttpInfo($get_package_detail_request)
     {
         $returnType = '\Swagger\Client\Model\GetPackageDetailResponses';
-        $request = $this->getPackageDetailRequest($authorization, $get_package_detail_request);
+        $request = $this->getPackageDetailRequest($get_package_detail_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4688,15 +4632,14 @@ class DefaultEbayClient
      *
      * 获取包裹详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetPackageDetailRequest $get_package_detail_request getPackageDetailRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPackageDetailAsync($authorization, $get_package_detail_request)
+    public function getPackageDetailAsync($get_package_detail_request)
     {
-        return $this->getPackageDetailAsyncWithHttpInfo($authorization, $get_package_detail_request)
+        return $this->getPackageDetailAsyncWithHttpInfo($get_package_detail_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4709,16 +4652,15 @@ class DefaultEbayClient
      *
      * 获取包裹详情
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetPackageDetailRequest $get_package_detail_request getPackageDetailRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPackageDetailAsyncWithHttpInfo($authorization, $get_package_detail_request)
+    public function getPackageDetailAsyncWithHttpInfo($get_package_detail_request)
     {
         $returnType = '\Swagger\Client\Model\GetPackageDetailResponses';
-        $request = $this->getPackageDetailRequest($authorization, $get_package_detail_request);
+        $request = $this->getPackageDetailRequest($get_package_detail_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4760,15 +4702,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'getPackageDetail'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetPackageDetailRequest $get_package_detail_request getPackageDetailRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getPackageDetailRequest($authorization, $get_package_detail_request)
+    protected function getPackageDetailRequest($get_package_detail_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling getPackageDetail'
@@ -4781,7 +4723,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/GetPackageDetail';
+        $resourcePath = '/GetPackageDetail';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4866,16 +4808,15 @@ class DefaultEbayClient
      *
      * 获取包裹状态
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetPackageStatusRequest $get_package_status_request getPackageStatusRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\GetPackageStatusResponses
      */
-    public function getPackageStatus($authorization, $get_package_status_request)
+    public function getPackageStatus($get_package_status_request)
     {
-        list($response) = $this->getPackageStatusWithHttpInfo($authorization, $get_package_status_request);
+        list($response) = $this->getPackageStatusWithHttpInfo($get_package_status_request);
         return $response;
     }
 
@@ -4884,17 +4825,16 @@ class DefaultEbayClient
      *
      * 获取包裹状态
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetPackageStatusRequest $get_package_status_request getPackageStatusRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\GetPackageStatusResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPackageStatusWithHttpInfo($authorization, $get_package_status_request)
+    public function getPackageStatusWithHttpInfo($get_package_status_request)
     {
         $returnType = '\Swagger\Client\Model\GetPackageStatusResponses';
-        $request = $this->getPackageStatusRequest($authorization, $get_package_status_request);
+        $request = $this->getPackageStatusRequest($get_package_status_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4968,15 +4908,14 @@ class DefaultEbayClient
      *
      * 获取包裹状态
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetPackageStatusRequest $get_package_status_request getPackageStatusRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPackageStatusAsync($authorization, $get_package_status_request)
+    public function getPackageStatusAsync($get_package_status_request)
     {
-        return $this->getPackageStatusAsyncWithHttpInfo($authorization, $get_package_status_request)
+        return $this->getPackageStatusAsyncWithHttpInfo($get_package_status_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4989,16 +4928,15 @@ class DefaultEbayClient
      *
      * 获取包裹状态
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetPackageStatusRequest $get_package_status_request getPackageStatusRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPackageStatusAsyncWithHttpInfo($authorization, $get_package_status_request)
+    public function getPackageStatusAsyncWithHttpInfo($get_package_status_request)
     {
         $returnType = '\Swagger\Client\Model\GetPackageStatusResponses';
-        $request = $this->getPackageStatusRequest($authorization, $get_package_status_request);
+        $request = $this->getPackageStatusRequest($get_package_status_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5040,15 +4978,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'getPackageStatus'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetPackageStatusRequest $get_package_status_request getPackageStatusRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getPackageStatusRequest($authorization, $get_package_status_request)
+    protected function getPackageStatusRequest($get_package_status_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling getPackageStatus'
@@ -5061,7 +4999,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/GetPackageStatus';
+        $resourcePath = '/GetPackageStatus';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5146,16 +5084,15 @@ class DefaultEbayClient
      *
      * 获取物流服务列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetServiceListRequest $get_service_list_request getServiceListRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\GetServiceListResponses
      */
-    public function getServiceList($authorization, $get_service_list_request)
+    public function getServiceList($get_service_list_request)
     {
-        list($response) = $this->getServiceListWithHttpInfo($authorization, $get_service_list_request);
+        list($response) = $this->getServiceListWithHttpInfo($get_service_list_request);
         return $response;
     }
 
@@ -5164,17 +5101,16 @@ class DefaultEbayClient
      *
      * 获取物流服务列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetServiceListRequest $get_service_list_request getServiceListRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\GetServiceListResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getServiceListWithHttpInfo($authorization, $get_service_list_request)
+    public function getServiceListWithHttpInfo($get_service_list_request)
     {
         $returnType = '\Swagger\Client\Model\GetServiceListResponses';
-        $request = $this->getServiceListRequest($authorization, $get_service_list_request);
+        $request = $this->getServiceListRequest($get_service_list_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5248,15 +5184,14 @@ class DefaultEbayClient
      *
      * 获取物流服务列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetServiceListRequest $get_service_list_request getServiceListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServiceListAsync($authorization, $get_service_list_request)
+    public function getServiceListAsync($get_service_list_request)
     {
-        return $this->getServiceListAsyncWithHttpInfo($authorization, $get_service_list_request)
+        return $this->getServiceListAsyncWithHttpInfo($get_service_list_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5269,16 +5204,15 @@ class DefaultEbayClient
      *
      * 获取物流服务列表
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetServiceListRequest $get_service_list_request getServiceListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServiceListAsyncWithHttpInfo($authorization, $get_service_list_request)
+    public function getServiceListAsyncWithHttpInfo($get_service_list_request)
     {
         $returnType = '\Swagger\Client\Model\GetServiceListResponses';
-        $request = $this->getServiceListRequest($authorization, $get_service_list_request);
+        $request = $this->getServiceListRequest($get_service_list_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5320,15 +5254,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'getServiceList'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetServiceListRequest $get_service_list_request getServiceListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getServiceListRequest($authorization, $get_service_list_request)
+    protected function getServiceListRequest($get_service_list_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling getServiceList'
@@ -5341,7 +5275,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/GetServiceList';
+        $resourcePath = '/GetServiceList';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5433,9 +5367,9 @@ class DefaultEbayClient
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\GetTrackingDetailResponses
      */
-    public function getTrackingDetail($authorization, $get_tracking_detail_request)
+    public function getTrackingDetail($get_tracking_detail_request)
     {
-        list($response) = $this->getTrackingDetailWithHttpInfo($authorization, $get_tracking_detail_request);
+        list($response) = $this->getTrackingDetailWithHttpInfo($get_tracking_detail_request);
         return $response;
     }
 
@@ -5444,17 +5378,16 @@ class DefaultEbayClient
      *
      * 获取包裹物流跟踪信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetTrackingDetailRequest $get_tracking_detail_request getTrackingDetailRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\GetTrackingDetailResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTrackingDetailWithHttpInfo($authorization, $get_tracking_detail_request)
+    public function getTrackingDetailWithHttpInfo($get_tracking_detail_request)
     {
         $returnType = '\Swagger\Client\Model\GetTrackingDetailResponses';
-        $request = $this->getTrackingDetailRequest($authorization, $get_tracking_detail_request);
+        $request = $this->getTrackingDetailRequest($get_tracking_detail_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5528,15 +5461,14 @@ class DefaultEbayClient
      *
      * 获取包裹物流跟踪信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetTrackingDetailRequest $get_tracking_detail_request getTrackingDetailRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTrackingDetailAsync($authorization, $get_tracking_detail_request)
+    public function getTrackingDetailAsync($get_tracking_detail_request)
     {
-        return $this->getTrackingDetailAsyncWithHttpInfo($authorization, $get_tracking_detail_request)
+        return $this->getTrackingDetailAsyncWithHttpInfo($get_tracking_detail_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5549,16 +5481,15 @@ class DefaultEbayClient
      *
      * 获取包裹物流跟踪信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetTrackingDetailRequest $get_tracking_detail_request getTrackingDetailRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTrackingDetailAsyncWithHttpInfo($authorization, $get_tracking_detail_request)
+    public function getTrackingDetailAsyncWithHttpInfo($get_tracking_detail_request)
     {
         $returnType = '\Swagger\Client\Model\GetTrackingDetailResponses';
-        $request = $this->getTrackingDetailRequest($authorization, $get_tracking_detail_request);
+        $request = $this->getTrackingDetailRequest($get_tracking_detail_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5600,15 +5531,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'getTrackingDetail'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\GetTrackingDetailRequest $get_tracking_detail_request getTrackingDetailRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTrackingDetailRequest($authorization, $get_tracking_detail_request)
+    protected function getTrackingDetailRequest($get_tracking_detail_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling getTrackingDetail'
@@ -5621,7 +5552,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/GetTrackingDetail';
+        $resourcePath = '/GetTrackingDetail';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5706,16 +5637,15 @@ class DefaultEbayClient
      *
      * 重新发货
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\RecreatePackageRequest $recreate_package_request recreatePackageRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\RecreatePackageResponses
      */
-    public function recreatePackage($authorization, $recreate_package_request)
+    public function recreatePackage($recreate_package_request)
     {
-        list($response) = $this->recreatePackageWithHttpInfo($authorization, $recreate_package_request);
+        list($response) = $this->recreatePackageWithHttpInfo($recreate_package_request);
         return $response;
     }
 
@@ -5724,17 +5654,16 @@ class DefaultEbayClient
      *
      * 重新发货
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\RecreatePackageRequest $recreate_package_request recreatePackageRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\RecreatePackageResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function recreatePackageWithHttpInfo($authorization, $recreate_package_request)
+    public function recreatePackageWithHttpInfo($recreate_package_request)
     {
         $returnType = '\Swagger\Client\Model\RecreatePackageResponses';
-        $request = $this->recreatePackageRequest($authorization, $recreate_package_request);
+        $request = $this->recreatePackageRequest($recreate_package_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5808,15 +5737,14 @@ class DefaultEbayClient
      *
      * 重新发货
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\RecreatePackageRequest $recreate_package_request recreatePackageRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function recreatePackageAsync($authorization, $recreate_package_request)
+    public function recreatePackageAsync($recreate_package_request)
     {
-        return $this->recreatePackageAsyncWithHttpInfo($authorization, $recreate_package_request)
+        return $this->recreatePackageAsyncWithHttpInfo($recreate_package_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5829,16 +5757,15 @@ class DefaultEbayClient
      *
      * 重新发货
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\RecreatePackageRequest $recreate_package_request recreatePackageRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function recreatePackageAsyncWithHttpInfo($authorization, $recreate_package_request)
+    public function recreatePackageAsyncWithHttpInfo($recreate_package_request)
     {
         $returnType = '\Swagger\Client\Model\RecreatePackageResponses';
-        $request = $this->recreatePackageRequest($authorization, $recreate_package_request);
+        $request = $this->recreatePackageRequest($recreate_package_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5880,15 +5807,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'recreatePackage'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\RecreatePackageRequest $recreate_package_request recreatePackageRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function recreatePackageRequest($authorization, $recreate_package_request)
+    protected function recreatePackageRequest($recreate_package_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling recreatePackage'
@@ -5901,7 +5828,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/RecreatePackage';
+        $resourcePath = '/RecreatePackage';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5986,16 +5913,15 @@ class DefaultEbayClient
      *
      * 更新地址信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\UpdateAddressPreferenceRequest $update_address_preference_request updateAddressPreferenceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\UpdateAddressPreferenceResponses
      */
-    public function updateAddressPreference($authorization, $update_address_preference_request)
+    public function updateAddressPreference($update_address_preference_request)
     {
-        list($response) = $this->updateAddressPreferenceWithHttpInfo($authorization, $update_address_preference_request);
+        list($response) = $this->updateAddressPreferenceWithHttpInfo($update_address_preference_request);
         return $response;
     }
 
@@ -6004,17 +5930,16 @@ class DefaultEbayClient
      *
      * 更新地址信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\UpdateAddressPreferenceRequest $update_address_preference_request updateAddressPreferenceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\UpdateAddressPreferenceResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAddressPreferenceWithHttpInfo($authorization, $update_address_preference_request)
+    public function updateAddressPreferenceWithHttpInfo($update_address_preference_request)
     {
         $returnType = '\Swagger\Client\Model\UpdateAddressPreferenceResponses';
-        $request = $this->updateAddressPreferenceRequest($authorization, $update_address_preference_request);
+        $request = $this->updateAddressPreferenceRequest($update_address_preference_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6088,15 +6013,14 @@ class DefaultEbayClient
      *
      * 更新地址信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\UpdateAddressPreferenceRequest $update_address_preference_request updateAddressPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAddressPreferenceAsync($authorization, $update_address_preference_request)
+    public function updateAddressPreferenceAsync($update_address_preference_request)
     {
-        return $this->updateAddressPreferenceAsyncWithHttpInfo($authorization, $update_address_preference_request)
+        return $this->updateAddressPreferenceAsyncWithHttpInfo($update_address_preference_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6109,16 +6033,15 @@ class DefaultEbayClient
      *
      * 更新地址信息
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\UpdateAddressPreferenceRequest $update_address_preference_request updateAddressPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAddressPreferenceAsyncWithHttpInfo($authorization, $update_address_preference_request)
+    public function updateAddressPreferenceAsyncWithHttpInfo($update_address_preference_request)
     {
         $returnType = '\Swagger\Client\Model\UpdateAddressPreferenceResponses';
-        $request = $this->updateAddressPreferenceRequest($authorization, $update_address_preference_request);
+        $request = $this->updateAddressPreferenceRequest($update_address_preference_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6160,15 +6083,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'updateAddressPreference'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\UpdateAddressPreferenceRequest $update_address_preference_request updateAddressPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateAddressPreferenceRequest($authorization, $update_address_preference_request)
+    protected function updateAddressPreferenceRequest($update_address_preference_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling updateAddressPreference'
@@ -6181,7 +6104,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/UpdateAddressPreference';
+        $resourcePath = '/UpdateAddressPreference';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6266,16 +6189,15 @@ class DefaultEbayClient
      *
      * 更新交运偏好
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\UpdateConsignPreferenceRequest $update_consign_preference_request updateConsignPreferenceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\UpdateConsignPreferenceResponses
      */
-    public function updateConsignPreference($authorization, $update_consign_preference_request)
+    public function updateConsignPreference($update_consign_preference_request)
     {
-        list($response) = $this->updateConsignPreferenceWithHttpInfo($authorization, $update_consign_preference_request);
+        list($response) = $this->updateConsignPreferenceWithHttpInfo($update_consign_preference_request);
         return $response;
     }
 
@@ -6284,17 +6206,16 @@ class DefaultEbayClient
      *
      * 更新交运偏好
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\UpdateConsignPreferenceRequest $update_consign_preference_request updateConsignPreferenceRequest (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\UpdateConsignPreferenceResponses, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateConsignPreferenceWithHttpInfo($authorization, $update_consign_preference_request)
+    public function updateConsignPreferenceWithHttpInfo($update_consign_preference_request)
     {
         $returnType = '\Swagger\Client\Model\UpdateConsignPreferenceResponses';
-        $request = $this->updateConsignPreferenceRequest($authorization, $update_consign_preference_request);
+        $request = $this->updateConsignPreferenceRequest($update_consign_preference_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6368,15 +6289,14 @@ class DefaultEbayClient
      *
      * 更新交运偏好
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\UpdateConsignPreferenceRequest $update_consign_preference_request updateConsignPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateConsignPreferenceAsync($authorization, $update_consign_preference_request)
+    public function updateConsignPreferenceAsync($update_consign_preference_request)
     {
-        return $this->updateConsignPreferenceAsyncWithHttpInfo($authorization, $update_consign_preference_request)
+        return $this->updateConsignPreferenceAsyncWithHttpInfo($update_consign_preference_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6389,16 +6309,15 @@ class DefaultEbayClient
      *
      * 更新交运偏好
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\UpdateConsignPreferenceRequest $update_consign_preference_request updateConsignPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateConsignPreferenceAsyncWithHttpInfo($authorization, $update_consign_preference_request)
+    public function updateConsignPreferenceAsyncWithHttpInfo($update_consign_preference_request)
     {
         $returnType = '\Swagger\Client\Model\UpdateConsignPreferenceResponses';
-        $request = $this->updateConsignPreferenceRequest($authorization, $update_consign_preference_request);
+        $request = $this->updateConsignPreferenceRequest($update_consign_preference_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6440,15 +6359,15 @@ class DefaultEbayClient
     /**
      * Create request for operation 'updateConsignPreference'
      *
-     * @param  string $authorization 调用登录认证接口取得的token值 (required)
      * @param  \Swagger\Client\Model\UpdateConsignPreferenceRequest $update_consign_preference_request updateConsignPreferenceRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateConsignPreferenceRequest($authorization, $update_consign_preference_request)
+    protected function updateConsignPreferenceRequest($update_consign_preference_request)
     {
         // verify the required parameter 'authorization' is set
+        $authorization=$this->authorization;
         if ($authorization === null) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $authorization when calling updateConsignPreference'
@@ -6461,7 +6380,7 @@ class DefaultEbayClient
             );
         }
 
-        $resourcePath = '/v1/api/UpdateConsignPreference';
+        $resourcePath = '/UpdateConsignPreference';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
