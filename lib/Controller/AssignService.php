@@ -27,8 +27,8 @@ class AssignService
             $req->setMessageId('11');
             $req->setEbayId('22');
             $data = new AssignServiceRequestData();
-            $data->setServiceId('1234');
-            $data->setPackageId('1234');
+            $data->setServiceId('EBCNUSPN2');
+            $data->setPackageId('2545498342031507');
             $req->setData([$data]);
             
             

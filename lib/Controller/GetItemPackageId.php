@@ -5,10 +5,6 @@ namespace Swagger\Client\Controller;
 use Swagger\Client\Api\DefaultEbayClient;
 use function GuzzleHttp\json_decode;
 use Swagger\Client\ApiException;
-use Swagger\Client\Model\GetActualCostRequest;
-use Swagger\Client\Model\GetActualCostRequestData;
-use Swagger\Client\Model\GetHandoverSheetRequest;
-use Swagger\Client\Model\GetHandoverSheetRequestData;
 use Swagger\Client\Model\GetItemPackageIdRequest;
 use Swagger\Client\Model\GetItemPackageIdRequestData;
 
@@ -31,8 +27,8 @@ class GetItemPackageId
             $req->setMessageId('11');
             $req->setEbayId('22');
             $data= new GetItemPackageIdRequestData();
-            $data->setItemId('1234');
-            $data->setTransactionId('1234');
+            $data->setItemId('1234567');
+            $data->setTransactionId('67890');
             $req->setData($data);
             
             $rep =$client->execute($req);

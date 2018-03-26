@@ -42,15 +42,17 @@ class AddPackage
             $ship_to_address->setPostcode('20000');
             $data->setShipToAddress($ship_to_address);
             $item_list=new ItemRequest();
-            $item_list->setItemId('1234');
-            $item_list->setTransactionId('1234');//
-            $item_list->setOrderLineItem('1234');
+            $itemid='1234567';
+            $transactionid='67890';
+            $orderlineitem=$itemid."-".$transactionid;
+            $item_list->setItemId($itemid);
+            $item_list->setTransactionId($transactionid);
+            $item_list->setOrderLineItem($orderlineitem);
             $item_list->setSoldQty(1);
             $item_list->setSoldPrice(1);
             $item_list->setSoldDate('2017-10-12T08:08:04+0800');
             $item_list->setPostedQty(1);
             $item_list->setPaymentDate('2017-10-12T08:08:04+0800');
-            $item_list->setOrderLineItem(1);
             $item_list->setBuyerId(1);
             $sku=new SkuRequest();
             $sku->setWeight(1);
@@ -63,8 +65,8 @@ class AddPackage
             
             $data->setItemList([$item_list]);
             
-            $data->setShipFromAddressId('24');
-            $data->setServiceId('1234');
+            $data->setShipFromAddressId('76');
+            $data->setServiceId('EBCNUSPN2');
             $data->setPackageWidth(100);
             $data->setPackageWeight(100);
             $data->setPackageLength(100);
@@ -74,6 +76,7 @@ class AddPackage
             
             $rep =$client->execute($req);
             
+            //2545653797486739
             $result=$rep->getData()->getPackageId();
             dump($result);
             

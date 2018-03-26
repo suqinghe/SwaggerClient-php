@@ -3,8 +3,6 @@ namespace Swagger\Client\Controller;
 
 
 use Swagger\Client\Api\DefaultEbayClient;
-use Swagger\Client\Model\GetAddressPreferenceListRequest;
-use Swagger\Client\Model\GetAddressPreferenceListRequestData;
 use function GuzzleHttp\json_decode;
 use Swagger\Client\ApiException;
 use Swagger\Client\Model\GetConsignPreferenceListRequest;

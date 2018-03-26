@@ -5,8 +5,6 @@ namespace Swagger\Client\Controller;
 use Swagger\Client\Api\DefaultEbayClient;
 use function GuzzleHttp\json_decode;
 use Swagger\Client\ApiException;
-use Swagger\Client\Model\GetActualCostRequest;
-use Swagger\Client\Model\GetActualCostRequestData;
 use Swagger\Client\Model\GetHandoverSheetRequest;
 use Swagger\Client\Model\GetHandoverSheetRequestData;
 
@@ -29,7 +27,7 @@ class GetHandoverSheet
             $req->setMessageId('11');
             $req->setEbayId('22');
             $data= new GetHandoverSheetRequestData();
-            $data->setTrackingNumbers(['1234']);
+            $data->setTrackingNumbers(['6bf6e6cf68ac47789a9938fd36efdebe']);
             $req->setData($data);
             
             

@@ -5,8 +5,6 @@ namespace Swagger\Client\Controller;
 use Swagger\Client\Api\DefaultEbayClient;
 use function GuzzleHttp\json_decode;
 use Swagger\Client\ApiException;
-use Swagger\Client\Model\GetServiceListRequest;
-use Swagger\Client\Model\GetServiceListRequestRequestData;
 use Swagger\Client\Model\UpdateAddressPreferenceRequest;
 use Swagger\Client\Model\UpdateAddressPreferenceRequestData;
 

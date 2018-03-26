@@ -5,10 +5,6 @@ namespace Swagger\Client\Controller;
 use Swagger\Client\Api\DefaultEbayClient;
 use function GuzzleHttp\json_decode;
 use Swagger\Client\ApiException;
-use Swagger\Client\Model\AssignServiceRequest;
-use Swagger\Client\Model\AssignServiceRequestData;
-use Swagger\Client\Model\CancelPackagesRequest;
-use Swagger\Client\Model\CancelPackagesRequestData;
 use Swagger\Client\Model\ConfirmPackagesRequest;
 use Swagger\Client\Model\ConfirmPackagesRequestData;
 
@@ -31,7 +27,7 @@ class ConfirmPackages
             $req->setMessageId('11');
             $req->setEbayId('22');
             $data= new ConfirmPackagesRequestData();
-            $data->setPackageIds(['1']);
+            $data->setPackageIds(['2545653797486739']);
             $req->setData($data);
             
             

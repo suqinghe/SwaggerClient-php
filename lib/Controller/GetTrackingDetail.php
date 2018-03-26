@@ -5,18 +5,6 @@ namespace Swagger\Client\Controller;
 use Swagger\Client\Api\DefaultEbayClient;
 use function GuzzleHttp\json_decode;
 use Swagger\Client\ApiException;
-use Swagger\Client\Model\GetActualCostRequest;
-use Swagger\Client\Model\GetActualCostRequestData;
-use Swagger\Client\Model\GetHandoverSheetRequest;
-use Swagger\Client\Model\GetHandoverSheetRequestData;
-use Swagger\Client\Model\GetItemPackageIdRequest;
-use Swagger\Client\Model\GetItemPackageIdRequestData;
-use Swagger\Client\Model\GetLabelRequest;
-use Swagger\Client\Model\GetLabelRequestData;
-use Swagger\Client\Model\GetPackageDetailRequest;
-use Swagger\Client\Model\GetPackageDetailRequestData;
-use Swagger\Client\Model\GetPackageStatusRequest;
-use Swagger\Client\Model\GetPackageStatusRequestData;
 use Swagger\Client\Model\GetTrackingDetailRequest;
 use Swagger\Client\Model\GetTrackingDetailRequestData;
 
@@ -39,7 +27,7 @@ class GetTrackingDetail
             $req->setMessageId('11');
             $req->setEbayId('22');
             $data= new GetTrackingDetailRequestData();
-            $data->setTrackingNumber('123');
+            $data->setTrackingNumber('6bf6e6cf68ac47789a9938fd36efdebe');
             $req->setData($data);
             
             $rep =$client->execute($req);

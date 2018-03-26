@@ -27,7 +27,7 @@ class RecreatePackage
             $req->setMessageId('11');
             $req->setEbayId('22');
             $data= new RecreatePackageRequestData();
-            $data->setPackageId('1234');
+            $data->setPackageId('2545653797486739');
             $req->setData($data);
             
             $rep =$client->execute($req);

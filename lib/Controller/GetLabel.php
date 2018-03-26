@@ -27,7 +27,7 @@ class GetLabel
             $req->setMessageId('11');
             $req->setEbayId('22');
             $data= new GetLabelRequestData();
-            $data->setTrackingNumber('1234');
+            $data->setTrackingNumber('6bf6e6cf68ac47789a9938fd36efdebe');
             $data->setPageSize(0);
             $req->setData($data);
             
