@@ -19,7 +19,7 @@
 		<tr>
 			<td><?php echo $i?></td>
 			<td><?php echo $item['name']?></td>
-			<td><a href="<?php echo $item['name']?>"><?php echo $item['title']?></a></td>
+			<td><a href="<?php echo PATH?><?php echo $item['name']?>"><?php echo $item['title']?></a></td>
 			<td><?php echo $item['path']?></td>
 		</tr>
 		<?php endforeach;?>

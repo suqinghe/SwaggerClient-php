@@ -82,7 +82,12 @@ if($pathInfo && is_array($pathInfo) && count($pathInfo)>0){
     $action=trim('index');
 }
 
-
+if($_SERVER['SCRIPT_NAME']!='/index.php'){
+    $path=strstr($_SERVER['SCRIPT_NAME'],'/index.php',true);
+    define('PATH',$path.'/');
+}else{
+    define('PATH','');
+}
 
 
 if(isset($_GET['a'])){
