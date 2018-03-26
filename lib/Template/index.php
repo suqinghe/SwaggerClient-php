@@ -10,12 +10,14 @@
 	<div style="width:90%;margin: 0 auto;">
 	<table class="table-responsive table table-condensed table-hover table table-striped">
 		<tr>
+			<th>序号</th>
 			<th>接口名称</th>
 			<th>接口描述</th>
 			<th>文档路径</th>
 		</tr>
-		<?php foreach($data as $item):?>
+		<?php $i=0;foreach($data as $item):$i++?>
 		<tr>
+			<td><?php echo $i?></td>
 			<td><?php echo $item['name']?></td>
 			<td><a href="/<?php echo $item['name']?>"><?php echo $item['title']?></a></td>
 			<td><?php echo $item['path']?></td>

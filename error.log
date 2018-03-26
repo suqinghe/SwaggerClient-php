@@ -920,3 +920,5 @@ Stack trace:
 #0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
 #1 {main}
   thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 101
+[26-Mar-2018 10:42:17 Asia/Shanghai] PHP Notice:  Undefined variable: data in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AssignService.php on line 32
+[26-Mar-2018 10:59:28 Asia/Shanghai] PHP Fatal error:  Cannot declare class Swagger\Client\Controller\ConfirmPackages, because the name is already in use in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\DeletePackages.php on line 20
