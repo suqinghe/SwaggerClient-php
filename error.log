@@ -915,3 +915,8 @@ Stack trace:
 #1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
 #2 {main}
   thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\UpdateConsignPreference.php on line 42
+[26-Mar-2018 09:41:53 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Class 'Swagger\Client\Controller\favicon.ico' not found in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php:101
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
+#1 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 101
