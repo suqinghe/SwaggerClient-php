@@ -934,3 +934,25 @@ Stack trace:
 #1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
 #2 {main}
   thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddPackageWithoutService.php on line 73
+[26-Mar-2018 14:17:11 Asia/Shanghai] PHP Fatal error:  Uncaught InvalidArgumentException: json_decode error: Syntax error in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php:304
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetLabel.php(38): GuzzleHttp\json_decode(NULL, true)
+#1 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\GetLabel->index()
+#2 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#3 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php on line 304
+[26-Mar-2018 14:17:40 Asia/Shanghai] PHP Fatal error:  Uncaught InvalidArgumentException: json_decode error: Syntax error in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php:304
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\GetLabel.php(38): GuzzleHttp\json_decode(NULL, true)
+#1 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\GetLabel->index()
+#2 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#3 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\vendor\guzzlehttp\guzzle\src\functions.php on line 304
+[26-Mar-2018 14:25:19 Asia/Shanghai] PHP Notice:  Undefined variable: itemid in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddPackageWithoutService.php on line 54
+[26-Mar-2018 14:25:19 Asia/Shanghai] PHP Notice:  Undefined variable: itemid in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddPackageWithoutService.php on line 55
+[26-Mar-2018 14:33:15 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\PackageInfoWithoutServiceRequest::setServiceId() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddPackageWithoutService.php:35
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(102): Swagger\Client\Controller\AddPackageWithoutService->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddPackageWithoutService.php on line 35

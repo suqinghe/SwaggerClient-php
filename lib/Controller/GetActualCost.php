@@ -27,7 +27,7 @@ class GetActualCost
             $req->setMessageId('11');
             $req->setEbayId('22');
             $data= new GetActualCostRequestData();
-            $data->setTrackingNumbers(['6bf6e6cf68ac47789a9938fd36efdebe']);
+            $data->setTrackingNumbers(['7106600181d34892a1f59ffd03f19d44']);
             $req->setData($data);
             
             
