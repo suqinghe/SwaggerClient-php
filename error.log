@@ -956,3 +956,13 @@ Stack trace:
 #1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
 #2 {main}
   thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddPackageWithoutService.php on line 35
+[27-Mar-2018 11:11:16 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Class 'Swagger\Client\Controller\favicon.ico' not found in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php:106
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
+#1 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 106
+[27-Mar-2018 11:11:16 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Class 'Swagger\Client\Controller\favicon.ico' not found in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php:106
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
+#1 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 106

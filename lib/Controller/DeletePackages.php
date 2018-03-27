@@ -7,6 +7,8 @@ use function GuzzleHttp\json_decode;
 use Swagger\Client\ApiException;
 use Swagger\Client\Model\CancelPackagesRequest;
 use Swagger\Client\Model\CancelPackagesRequestData;
+use Swagger\Client\Model\DeletePackagesRequest;
+use Swagger\Client\Model\DeletePackagesRequestData;
 
 /**
  * @desc 删除包裹信息
@@ -22,12 +24,12 @@ class DeletePackages
             $authorization="TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
             $client = new DefaultEbayClient($url,$authorization);
             
-            $req= new CancelPackagesRequest();
+            $req= new DeletePackagesRequest();
             $req->setTimestamp(time());
             $req->setMessageId('11');
             $req->setEbayId('22');
-            $data= new CancelPackagesRequestData();
-            $data->setPackageIds(['2545644552847507']);
+            $data= new DeletePackagesRequestData();
+            $data->setPackageIds(['2551628248383635']);
             $req->setData($data);
             
             
