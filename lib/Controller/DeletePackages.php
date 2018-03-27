@@ -29,7 +29,7 @@ class DeletePackages
             $req->setMessageId('11');
             $req->setEbayId('22');
             $data= new DeletePackagesRequestData();
-            $data->setPackageIds(['2551628248383635']);
+            $data->setPackageIds(['2551641742246035']);
             $req->setData($data);
             
             
