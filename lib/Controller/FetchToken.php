@@ -19,15 +19,7 @@ class FetchToken
         $authorization =  $accessToken->getToken();
         dump($authorization);
     }
-//     function index(){
-//         $url='https://api.edisebay.com/v1/api';
-//         $devId='56368199';
-//         $secret='b5b4acbb5b204d84b5a5f44442c8f4805636';
-//         $client=new DefaultEbayClient();
-//         $accessToken=$client->fetchToken($url,$devId,$secret);
-//         $authorization =  $accessToken->getToken();
-//         dump($authorization);
-//     }
+
 
 }
 

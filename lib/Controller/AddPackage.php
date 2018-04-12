@@ -60,7 +60,6 @@ class AddPackage
             $sku->setOrigin('CN');
             $sku->setNameEn('demo');
             $sku->setNameZh('测试');
-           // $sku->setIsLiBattery(false);
             $sku->setLiBatteryType(0);
             $item_list->setSku($sku);
             
@@ -78,7 +77,8 @@ class AddPackage
             $rep =$client->execute($req);
             
             //2642130466635916
-            $result=$rep->getData()->getPackageId();
+            //$result=$rep->getData()->getPackageId();
+            $result=$rep->getData();
             dump($result);
             
             

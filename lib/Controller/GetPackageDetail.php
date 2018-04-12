@@ -27,7 +27,7 @@ class GetPackageDetail
             $req->setMessageId('11');
             $req->setEbayId('wilzhan-60');
             $data= new GetPackageDetailRequestData();
-            $data->setPackageId('2545653797486739');
+            $data->setPackageId('2642150011895948');
             $req->setData($data);
             
             $rep =$client->execute($req);

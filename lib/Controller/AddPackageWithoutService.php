@@ -31,12 +31,12 @@ class AddPackageWithoutService
             $req->setMessageId('11');
             $req->setEbayId('wilzhan-60');
             $data = new PackageInfoWithoutServiceRequest();
-            $data->setShipFromAddressId('74');
+            $data->setShipFromAddressId('80003064');
             $data->setPackageWidth(1);
             $data->setPackageWeight(1);
             $data->setPackageLength(1);
             $data->setPackageHeight(1);
-            $data->setConsignPreferenceId('14');
+            $data->setConsignPreferenceId('324');
             $ship_to_address=new ShipToAddressRequest();
             $ship_to_address->setStreet1('3287 Hillside Street');
             $ship_to_address->setProvince('310000');//上海
@@ -68,7 +68,6 @@ class AddPackageWithoutService
             $sku->setOrigin('CN');
             $sku->setNameEn('demo');
             $sku->setNameZh('测试');
-            //$sku->setIsLiBattery(false);
             $sku->setLiBatteryType(0);
             $item_list->setSku($sku);
             $data->setItemList([$item_list]);
