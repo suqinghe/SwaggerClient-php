@@ -966,3 +966,53 @@ Stack trace:
 #0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
 #1 {main}
   thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 106
+[11-Apr-2018 16:17:58 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Class 'Swagger\Client\Controller\favicon.ico' not found in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php:106
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
+#1 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 106
+[11-Apr-2018 16:18:02 Asia/Shanghai] PHP Fatal error:  Uncaught Swagger\Client\ApiException: [405] Client error: `POST https://sandbox.edisebay.com/v1/api/FetchToken` resulted in a `405 Method Not Allowed` response:
+{"timestamp":"2018-04-11 16:18:23","status":405,"error":"Method Not Allowed","exception":"org.springframework.web.HttpRe (truncated...)
+ in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php:2356
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php(2331): Swagger\Client\Api\DefaultEbayClient->fetchTokenWithHttpInfo('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\FetchToken.php(18): Swagger\Client\Api\DefaultEbayClient->fetchToken('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(107): Swagger\Client\Controller\FetchToken->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 2356
+[11-Apr-2018 16:18:14 Asia/Shanghai] PHP Fatal error:  Uncaught Swagger\Client\ApiException: [405] Client error: `POST https://sandbox.edisebay.com/v1/api/FetchToken` resulted in a `405 Method Not Allowed` response:
+{"timestamp":"2018-04-11 16:18:36","status":405,"error":"Method Not Allowed","exception":"org.springframework.web.HttpRe (truncated...)
+ in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php:2356
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php(2331): Swagger\Client\Api\DefaultEbayClient->fetchTokenWithHttpInfo('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\FetchToken.php(18): Swagger\Client\Api\DefaultEbayClient->fetchToken('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(107): Swagger\Client\Controller\FetchToken->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 2356
+[11-Apr-2018 16:23:45 Asia/Shanghai] PHP Fatal error:  Uncaught Swagger\Client\ApiException: [405] Client error: `POST https://sandbox.edisebay.com/v1/api/FetchToken` resulted in a `405 Method Not Allowed` response:
+{"timestamp":"2018-04-11 16:24:07","status":405,"error":"Method Not Allowed","exception":"org.springframework.web.HttpRe (truncated...)
+ in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php:2356
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php(2331): Swagger\Client\Api\DefaultEbayClient->fetchTokenWithHttpInfo('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\FetchToken.php(18): Swagger\Client\Api\DefaultEbayClient->fetchToken('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(107): Swagger\Client\Controller\FetchToken->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 2356
+[12-Apr-2018 10:00:29 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Class 'Swagger\Client\Controller\favicon.ico' not found in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php:106
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require()
+#1 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php on line 106
+[12-Apr-2018 10:00:35 Asia/Shanghai] PHP Fatal error:  Uncaught Swagger\Client\ApiException: [405] Client error: `POST https://sandbox.edisebay.com/v1/api/FetchToken` resulted in a `405 Method Not Allowed` response:
+{"timestamp":"2018-04-12 10:00:55","status":405,"error":"Method Not Allowed","exception":"org.springframework.web.HttpRe (truncated...)
+ in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php:2356
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php(2331): Swagger\Client\Api\DefaultEbayClient->fetchTokenWithHttpInfo('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\FetchToken.php(18): Swagger\Client\Api\DefaultEbayClient->fetchToken('https://sandbox...', '56368199', 'b5b4acbb5b204d8...')
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(107): Swagger\Client\Controller\FetchToken->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 2356
