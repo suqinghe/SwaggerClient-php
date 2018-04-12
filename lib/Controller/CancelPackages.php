@@ -27,7 +27,7 @@ class CancelPackages
             $req->setMessageId('11');
             $req->setEbayId('wilzhan-60');
             $data= new CancelPackagesRequestData();
-            $data->setPackageIds(['2551641742246035']);
+            $data->setPackageIds(['2642150011895948']);
             $req->setData($data);
             
             

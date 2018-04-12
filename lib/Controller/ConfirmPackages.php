@@ -27,7 +27,7 @@ class ConfirmPackages
             $req->setMessageId('11');
             $req->setEbayId('wilzhan-60');
             $data= new ConfirmPackagesRequestData();
-            $data->setPackageIds(['2545653797486739']);
+            $data->setPackageIds(['2642150011895948']);
             $req->setData($data);
             
             
