@@ -36,7 +36,7 @@ use \Swagger\Client\ObjectSerializer;
  * DirectionsResponses Class Doc Comment
  *
  * @category Class
- * @description è·¯åä¿¡æ¯
+ * @description 路向信息
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -237,7 +237,7 @@ class DirectionsResponses implements ModelInterface, ArrayAccess
     /**
      * Sets from
      *
-     * @param string $from èµ·å§å½å®¶ä»£ç 
+     * @param string $from 起始国家代码
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class DirectionsResponses implements ModelInterface, ArrayAccess
     /**
      * Sets to
      *
-     * @param string $to ç®æ å½å®¶ä»£ç 
+     * @param string $to 目标国家代码
      *
      * @return $this
      */

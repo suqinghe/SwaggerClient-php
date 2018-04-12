@@ -36,7 +36,7 @@ use \Swagger\Client\ObjectSerializer;
  * ConfirmPackagesResponsesData Class Doc Comment
  *
  * @category Class
- * @description ç¡®è®¤ç»æ
+ * @description 确认结果
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -249,7 +249,7 @@ class ConfirmPackagesResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param string $message æå®ç»ææ¶æ¯
+     * @param string $message 指定结果消息
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class ConfirmPackagesResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets package_id
      *
-     * @param string $package_id åè£¹ID
+     * @param string $package_id 包裹ID
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class ConfirmPackagesResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets result_code
      *
-     * @param int $result_code æå®ç»æ
+     * @param int $result_code 指定结果
      *
      * @return $this
      */

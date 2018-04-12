@@ -224,7 +224,7 @@ class GetHandoverSheetResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets base64_str
      *
-     * @param string $base64_str base64ç¼ç å­ç¬¦
+     * @param string $base64_str base64编码字符
      *
      * @return $this
      */

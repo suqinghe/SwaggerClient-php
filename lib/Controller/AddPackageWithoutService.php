@@ -21,15 +21,15 @@ class AddPackageWithoutService
     function index(){
         try {
  
-            $url='https://sandbox.edisebay.com/v1/api';
-            $authorization="TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
+            $url='https://istslb01.eastasia.cloudapp.azure.com/v1.5/api';
+            $authorization="TGT-16-95IUOO5EflttkMNeT2p7bMxhBeRyiErVFYWt1byThbd0HKAjje-qapassport.eis.cn";
             $client = new DefaultEbayClient($url,$authorization);
             
             
             $req = new addPackageWithoutServiceRequest();
             $req->setTimestamp(time());
             $req->setMessageId('11');
-            $req->setEbayId('22');
+            $req->setEbayId('wilzhan-60');
             $data = new PackageInfoWithoutServiceRequest();
             $data->setShipFromAddressId('74');
             $data->setPackageWidth(1);
@@ -49,8 +49,8 @@ class AddPackageWithoutService
             $ship_to_address->setPostcode('41016');
             $data->setShipToAddress($ship_to_address);
             $item_list=new ItemRequest();
-            $itemid='273125384199';
-            $transactionid='12345';
+            $itemid='112275864244';
+            $transactionid='1735911797001';
             $orderlineitem=$itemid."-".$transactionid;
             $item_list->setItemId($itemid);
             $item_list->setTransactionId($transactionid);
@@ -65,10 +65,11 @@ class AddPackageWithoutService
             $sku=new SkuRequest();
             $sku->setWeight(1);
             $sku->setPrice(1);
-            $sku->setOrigin('CN1');
-            $sku->setNameEn('demo1');
-            $sku->setNameZh('测试1');
-            $sku->setIsLiBattery(false);
+            $sku->setOrigin('CN');
+            $sku->setNameEn('demo');
+            $sku->setNameZh('测试');
+            //$sku->setIsLiBattery(false);
+            $sku->setLiBatteryType(0);
             $item_list->setSku($sku);
             $data->setItemList([$item_list]);
             

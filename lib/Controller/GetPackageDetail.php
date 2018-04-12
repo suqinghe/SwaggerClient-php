@@ -18,14 +18,14 @@ class GetPackageDetail
     function index(){
         try {
  
-            $url='https://sandbox.edisebay.com/v1/api';
-            $authorization="TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
+            $url='https://istslb01.eastasia.cloudapp.azure.com/v1.5/api';
+            $authorization="TGT-16-95IUOO5EflttkMNeT2p7bMxhBeRyiErVFYWt1byThbd0HKAjje-qapassport.eis.cn";
             $client = new DefaultEbayClient($url,$authorization);
             
             $req= new GetPackageDetailRequest();
             $req->setTimestamp(time());
             $req->setMessageId('11');
-            $req->setEbayId('22');
+            $req->setEbayId('wilzhan-60');
             $data= new GetPackageDetailRequestData();
             $data->setPackageId('2545653797486739');
             $req->setData($data);

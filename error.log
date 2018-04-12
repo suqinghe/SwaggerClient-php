@@ -1016,3 +1016,39 @@ Stack trace:
 #3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
 #4 {main}
   thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 2356
+[12-Apr-2018 11:22:13 Asia/Shanghai] PHP Fatal error:  Uncaught Swagger\Client\ApiException: [404] Client error: `POST https://istslb01.eastasia.cloudapp.azure.com/v1.5/api/FetchToken` resulted in a `404 Not Found` response:
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <meta name='keywords' content='' />
+  <meta name='descri (truncated...)
+ in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php:2356
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php(2331): Swagger\Client\Api\DefaultEbayClient->fetchTokenWithHttpInfo('https://istslb0...', 'abcd', '123456')
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\FetchToken.php(19): Swagger\Client\Api\DefaultEbayClient->fetchToken('https://istslb0...', 'abcd', '123456')
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(107): Swagger\Client\Controller\FetchToken->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 2356
+[12-Apr-2018 11:22:39 Asia/Shanghai] PHP Fatal error:  Uncaught Swagger\Client\ApiException: [404] Client error: `POST https://istslb01.eastasia.cloudapp.azure.com/v1.5/api/FetchToken` resulted in a `404 Not Found` response:
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <meta name='keywords' content='' />
+  <meta name='descri (truncated...)
+ in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php:2356
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php(2331): Swagger\Client\Api\DefaultEbayClient->fetchTokenWithHttpInfo('https://istslb0...', 'abcd', '123456')
+#1 D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\FetchToken.php(18): Swagger\Client\Api\DefaultEbayClient->fetchToken('https://istslb0...', 'abcd', '123456')
+#2 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(107): Swagger\Client\Controller\FetchToken->index()
+#3 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#4 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Api\DefaultEbayClient.php on line 2356
+[12-Apr-2018 14:07:01 Asia/Shanghai] PHP Fatal error:  Uncaught Error: Call to undefined method Swagger\Client\Model\SkuRequest::setIsLiBattery() in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddPackage.php:63
+Stack trace:
+#0 D:\wwwroot\ebay\SwaggerClient-php\bootstrap.php(107): Swagger\Client\Controller\AddPackage->index()
+#1 D:\wwwroot\ebay\SwaggerClient-php\index.php(2): require('D:\\wwwroot\\ebay...')
+#2 {main}
+  thrown in D:\wwwroot\ebay\SwaggerClient-php\lib\Controller\AddPackage.php on line 63

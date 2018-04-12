@@ -248,7 +248,7 @@ class GetLabelRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets page_size
      *
-     * @param string $page_size æ ç­¾æ ¼å¼ï¼å¯ç¨å¼ï¼ 0 - éç¨äºæå°A4 æ ¼å¼æ ç­¾,1 - éç¨äºæå°4å¯¸ çç­ææ ç­¾çº¸æ ¼å¼æ ç­¾
+     * @param string $page_size 标签格式，可用值： 0 - 适用于打印A4 格式标签,1 - 适用于打印4寸 的热敏标签纸格式标签
      *
      * @return $this
      */
@@ -272,7 +272,7 @@ class GetLabelRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets print_preference
      *
-     * @param string $print_preference æå°åå¥½é¢è®¾ï¼ä¸ºç©ºæ¶æå°ææåï¼å¦åææéæ©éè¦æå°çåä½¿ç¨éå·æ¼æ¥å­ç¬¦ä¸².å¦ï¼ï¼itemId,skuNo,nameZh,nameEn,property,quantity,sellerId,buyerIdï¼
+     * @param string $print_preference 打印偏好预设，为空时打印所有列，否则按所选择需要打印的列使用逗号拼接字符串.如：（itemId,skuNo,nameZh,nameEn,property,quantity,sellerId,buyerId）
      *
      * @return $this
      */
@@ -296,7 +296,7 @@ class GetLabelRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_number
      *
-     * @param string $tracking_number åè£¹è·è¸ªå·
+     * @param string $tracking_number 包裹跟踪号
      *
      * @return $this
      */

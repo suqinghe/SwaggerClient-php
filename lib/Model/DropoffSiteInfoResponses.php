@@ -36,7 +36,7 @@ use \Swagger\Client\ObjectSerializer;
  * DropoffSiteInfoResponses Class Doc Comment
  *
  * @category Class
- * @description ç©æµæå¡åé¡µä¿¡æ¯
+ * @description 物流服务分页信息
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -333,7 +333,7 @@ class DropoffSiteInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets city
      *
-     * @param string $city å¸
+     * @param string $city 市
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class DropoffSiteInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets contact
      *
-     * @param string $contact èç³»äºº
+     * @param string $contact 联系人
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class DropoffSiteInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country å½å®¶
+     * @param string $country 国家
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class DropoffSiteInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets district
      *
-     * @param string $district åºå¿
+     * @param string $district 区县
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class DropoffSiteInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets dropoff_site_id
      *
-     * @param string $dropoff_site_id ç«ç¹ID
+     * @param string $dropoff_site_id 站点ID
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class DropoffSiteInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets mobile
      *
-     * @param string $mobile èç³»çµè¯
+     * @param string $mobile 联系电话
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class DropoffSiteInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name ç«ç¹åç§°
+     * @param string $name 站点名称
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class DropoffSiteInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets province
      *
-     * @param string $province ç
+     * @param string $province 省
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class DropoffSiteInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets street1
      *
-     * @param string $street1 è¡éå°å1
+     * @param string $street1 街道地址1
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class DropoffSiteInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets street2
      *
-     * @param string $street2 è¡éå°å2
+     * @param string $street2 街道地址2
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class DropoffSiteInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets street3
      *
-     * @param string $street3 è¡éå°å3
+     * @param string $street3 街道地址3
      *
      * @return $this
      */

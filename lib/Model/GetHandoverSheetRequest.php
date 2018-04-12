@@ -266,7 +266,7 @@ class GetHandoverSheetRequest implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\GetHandoverSheetRequestData $data è¦æå°äº¤æ¥åçåè£¹è·è¸ªå·åè¡¨ï¼è³å°ä¸ä¸ª
+     * @param \Swagger\Client\Model\GetHandoverSheetRequestData $data 要打印交接单的包裹跟踪号列表，至少一个
      *
      * @return $this
      */
@@ -290,7 +290,7 @@ class GetHandoverSheetRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ebay_id
      *
-     * @param string $ebay_id åå®¶eBayè´¦æ·
+     * @param string $ebay_id 卖家eBay账户
      *
      * @return $this
      */
@@ -314,7 +314,7 @@ class GetHandoverSheetRequest implements ModelInterface, ArrayAccess
     /**
      * Sets message_id
      *
-     * @param string $message_id æ¶æ¯ID
+     * @param string $message_id 消息ID
      *
      * @return $this
      */
@@ -362,7 +362,7 @@ class GetHandoverSheetRequest implements ModelInterface, ArrayAccess
     /**
      * Sets timestamp
      *
-     * @param int $timestamp æ¶é´æ³
+     * @param int $timestamp 时间戳
      *
      * @return $this
      */

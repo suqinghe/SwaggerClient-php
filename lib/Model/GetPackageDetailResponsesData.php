@@ -36,7 +36,7 @@ use \Swagger\Client\ObjectSerializer;
  * GetPackageDetailResponsesData Class Doc Comment
  *
  * @category Class
- * @description åè£¹ä¿¡æ¯
+ * @description 包裹信息
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -333,7 +333,7 @@ class GetPackageDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets consign_preference_id
      *
-     * @param string $consign_preference_id äº¤è¿åå¥½ID
+     * @param string $consign_preference_id 交运偏好ID
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class GetPackageDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets incoterms
      *
-     * @param int $incoterms å½è´¸æ¡è§ï¼å¯ç¨å¼:0 - DDP(åå®¶æ¿æå³ç¨) 1 - DDU(ä¹°å®¶æ¿æå³ç¨) ä¸ºç©ºæ¶é»è®¤å¼ä¸ºDDU
+     * @param int $incoterms 国贸条规，可用值:0 - DDP(卖家承担关税) 1 - DDU(买家承担关税) 为空时默认值为DDU
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class GetPackageDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets package_height
      *
-     * @param float $package_height åè£¹é«åº¦
+     * @param float $package_height 包裹高度
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class GetPackageDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets package_id
      *
-     * @param string $package_id åè£¹ID
+     * @param string $package_id 包裹ID
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class GetPackageDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets package_length
      *
-     * @param float $package_length åè£¹é¿åº¦
+     * @param float $package_length 包裹长度
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class GetPackageDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets package_weight
      *
-     * @param float $package_weight åè£¹éé
+     * @param float $package_weight 包裹重量
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class GetPackageDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets package_width
      *
-     * @param float $package_width åè£¹å®½åº¦
+     * @param float $package_width 包裹宽度
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class GetPackageDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets service_id
      *
-     * @param string $service_id ç©æµæå¡ID
+     * @param string $service_id 物流服务ID
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class GetPackageDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets ship_from_address_id
      *
-     * @param string $ship_from_address_id åè´§å°åID
+     * @param string $ship_from_address_id 发货地址ID
      *
      * @return $this
      */

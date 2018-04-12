@@ -36,7 +36,7 @@ use \Swagger\Client\ObjectSerializer;
  * GetDropoffSiteListResponsesData Class Doc Comment
  *
  * @category Class
- * @description ç©æµæå¡åé¡µä¿¡æ¯
+ * @description 物流服务分页信息
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -297,7 +297,7 @@ class GetDropoffSiteListResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets page_number
      *
-     * @param int $page_number å½åé¡µç 
+     * @param int $page_number 当前页码
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class GetDropoffSiteListResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets page_size
      *
-     * @param int $page_size å½ååé¡µå¤§å°
+     * @param int $page_size 当前分页大小
      *
      * @return $this
      */
@@ -345,7 +345,7 @@ class GetDropoffSiteListResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets toal_page_number
      *
-     * @param int $toal_page_number æ»é¡µæ°
+     * @param int $toal_page_number 总页数
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class GetDropoffSiteListResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets total_count
      *
-     * @param int $total_count æ»è®°å½æ°
+     * @param int $total_count 总记录数
      *
      * @return $this
      */

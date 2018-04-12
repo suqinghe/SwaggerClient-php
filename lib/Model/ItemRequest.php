@@ -369,7 +369,7 @@ class ItemRequest implements ModelInterface, ArrayAccess
     /**
      * Sets buyer_id
      *
-     * @param string $buyer_id eBayä¹°å®¶ID
+     * @param string $buyer_id eBay买家ID
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class ItemRequest implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code è´§å¸ç¬¦å·,é»è®¤ä¸ºUSD
+     * @param string $currency_code 货币符号,默认为USD
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class ItemRequest implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email ä¹°å®¶eBayçµé®
+     * @param string $email 买家eBay电邮
      *
      * @return $this
      */
@@ -441,7 +441,7 @@ class ItemRequest implements ModelInterface, ArrayAccess
     /**
      * Sets item_id
      *
-     * @param string $item_id eBayç©åå·
+     * @param string $item_id eBay物品号
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class ItemRequest implements ModelInterface, ArrayAccess
     /**
      * Sets item_title
      *
-     * @param string $item_title eBayååæ é¢
+     * @param string $item_title eBay商品标题
      *
      * @return $this
      */
@@ -489,7 +489,7 @@ class ItemRequest implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param string $message ä¹°å®¶eBayçè¨
+     * @param string $message 买家eBay留言
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class ItemRequest implements ModelInterface, ArrayAccess
     /**
      * Sets note
      *
-     * @param string $note éæ³¨
+     * @param string $note 附注
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class ItemRequest implements ModelInterface, ArrayAccess
     /**
      * Sets order_id
      *
-     * @param string $order_id eBayåå¹¶è®¢åæ¶çæçä¸ä¸ªæ°çOrder ID
+     * @param string $order_id eBay合并订单时生成的一个新的Order ID
      *
      * @return $this
      */

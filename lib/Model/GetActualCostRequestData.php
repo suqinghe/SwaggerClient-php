@@ -224,7 +224,7 @@ class GetActualCostRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_numbers
      *
-     * @param string[] $tracking_numbers åè£¹è·è¸ªå·åè¡¨
+     * @param string[] $tracking_numbers 包裹跟踪号列表
      *
      * @return $this
      */

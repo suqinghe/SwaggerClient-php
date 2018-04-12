@@ -236,7 +236,7 @@ class GetLabelResponses implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\GetLabelResponsesData $data PDFæä»¶æµ
+     * @param \Swagger\Client\Model\GetLabelResponsesData $data PDF文件流
      *
      * @return $this
      */

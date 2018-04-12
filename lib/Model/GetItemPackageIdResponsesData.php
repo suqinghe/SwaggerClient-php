@@ -236,7 +236,7 @@ class GetItemPackageIdResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets package_id
      *
-     * @param string $package_id åè£¹ID
+     * @param string $package_id 包裹ID
      *
      * @return $this
      */
@@ -260,7 +260,7 @@ class GetItemPackageIdResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_number
      *
-     * @param string $tracking_number æ°çåè£¹è·è¸ªå·
+     * @param string $tracking_number 新的包裹跟踪号
      *
      * @return $this
      */

@@ -290,7 +290,7 @@ class GetServiceListRequest implements ModelInterface, ArrayAccess
     /**
      * Sets ebay_id
      *
-     * @param string $ebay_id åå®¶eBayè´¦æ·
+     * @param string $ebay_id 卖家eBay账户
      *
      * @return $this
      */
@@ -314,7 +314,7 @@ class GetServiceListRequest implements ModelInterface, ArrayAccess
     /**
      * Sets message_id
      *
-     * @param string $message_id æ¶æ¯ID
+     * @param string $message_id 消息ID
      *
      * @return $this
      */
@@ -362,7 +362,7 @@ class GetServiceListRequest implements ModelInterface, ArrayAccess
     /**
      * Sets timestamp
      *
-     * @param int $timestamp æ¶é´æ³
+     * @param int $timestamp 时间戳
      *
      * @return $this
      */

@@ -236,7 +236,7 @@ class GetHandoverSheetResponses implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\GetHandoverSheetResponsesData $data PDFäº¤æ¥åæµ
+     * @param \Swagger\Client\Model\GetHandoverSheetResponsesData $data PDF交接单流
      *
      * @return $this
      */

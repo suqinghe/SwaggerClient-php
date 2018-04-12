@@ -61,17 +61,14 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         'description_en' => 'string',
         'description_zh' => 'string',
         'directions' => '\Swagger\Client\Model\DirectionsResponses[]',
-        'fee_description' => 'string',
-        'incoterms' => 'int',
-        'is_support_elec' => 'bool',
+        'incoterm' => 'int',
         'max_length' => 'float',
-        'max_total_length' => 'float',
         'max_weight' => 'float',
         'name_en' => 'string',
         'name_zh' => 'string',
-        'picture' => 'string',
-        'prescription' => 'string',
-        'service_id' => 'string'
+        'service_id' => 'string',
+        'sum_length' => 'float',
+        'support_battery_type' => 'string'
     ];
 
     /**
@@ -83,17 +80,14 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         'description_en' => null,
         'description_zh' => null,
         'directions' => null,
-        'fee_description' => null,
-        'incoterms' => 'int32',
-        'is_support_elec' => null,
+        'incoterm' => 'int32',
         'max_length' => null,
-        'max_total_length' => null,
         'max_weight' => null,
         'name_en' => null,
         'name_zh' => null,
-        'picture' => null,
-        'prescription' => null,
-        'service_id' => null
+        'service_id' => null,
+        'sum_length' => null,
+        'support_battery_type' => null
     ];
 
     /**
@@ -126,17 +120,14 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         'description_en' => 'descriptionEn',
         'description_zh' => 'descriptionZh',
         'directions' => 'directions',
-        'fee_description' => 'feeDescription',
-        'incoterms' => 'incoterms',
-        'is_support_elec' => 'isSupportElec',
+        'incoterm' => 'incoterm',
         'max_length' => 'maxLength',
-        'max_total_length' => 'maxTotalLength',
         'max_weight' => 'maxWeight',
         'name_en' => 'nameEn',
         'name_zh' => 'nameZh',
-        'picture' => 'picture',
-        'prescription' => 'prescription',
-        'service_id' => 'serviceId'
+        'service_id' => 'serviceId',
+        'sum_length' => 'sumLength',
+        'support_battery_type' => 'supportBatteryType'
     ];
 
     /**
@@ -148,17 +139,14 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         'description_en' => 'setDescriptionEn',
         'description_zh' => 'setDescriptionZh',
         'directions' => 'setDirections',
-        'fee_description' => 'setFeeDescription',
-        'incoterms' => 'setIncoterms',
-        'is_support_elec' => 'setIsSupportElec',
+        'incoterm' => 'setIncoterm',
         'max_length' => 'setMaxLength',
-        'max_total_length' => 'setMaxTotalLength',
         'max_weight' => 'setMaxWeight',
         'name_en' => 'setNameEn',
         'name_zh' => 'setNameZh',
-        'picture' => 'setPicture',
-        'prescription' => 'setPrescription',
-        'service_id' => 'setServiceId'
+        'service_id' => 'setServiceId',
+        'sum_length' => 'setSumLength',
+        'support_battery_type' => 'setSupportBatteryType'
     ];
 
     /**
@@ -170,17 +158,14 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         'description_en' => 'getDescriptionEn',
         'description_zh' => 'getDescriptionZh',
         'directions' => 'getDirections',
-        'fee_description' => 'getFeeDescription',
-        'incoterms' => 'getIncoterms',
-        'is_support_elec' => 'getIsSupportElec',
+        'incoterm' => 'getIncoterm',
         'max_length' => 'getMaxLength',
-        'max_total_length' => 'getMaxTotalLength',
         'max_weight' => 'getMaxWeight',
         'name_en' => 'getNameEn',
         'name_zh' => 'getNameZh',
-        'picture' => 'getPicture',
-        'prescription' => 'getPrescription',
-        'service_id' => 'getServiceId'
+        'service_id' => 'getServiceId',
+        'sum_length' => 'getSumLength',
+        'support_battery_type' => 'getSupportBatteryType'
     ];
 
     /**
@@ -246,17 +231,14 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         $this->container['description_en'] = isset($data['description_en']) ? $data['description_en'] : null;
         $this->container['description_zh'] = isset($data['description_zh']) ? $data['description_zh'] : null;
         $this->container['directions'] = isset($data['directions']) ? $data['directions'] : null;
-        $this->container['fee_description'] = isset($data['fee_description']) ? $data['fee_description'] : null;
-        $this->container['incoterms'] = isset($data['incoterms']) ? $data['incoterms'] : null;
-        $this->container['is_support_elec'] = isset($data['is_support_elec']) ? $data['is_support_elec'] : null;
+        $this->container['incoterm'] = isset($data['incoterm']) ? $data['incoterm'] : null;
         $this->container['max_length'] = isset($data['max_length']) ? $data['max_length'] : null;
-        $this->container['max_total_length'] = isset($data['max_total_length']) ? $data['max_total_length'] : null;
         $this->container['max_weight'] = isset($data['max_weight']) ? $data['max_weight'] : null;
         $this->container['name_en'] = isset($data['name_en']) ? $data['name_en'] : null;
         $this->container['name_zh'] = isset($data['name_zh']) ? $data['name_zh'] : null;
-        $this->container['picture'] = isset($data['picture']) ? $data['picture'] : null;
-        $this->container['prescription'] = isset($data['prescription']) ? $data['prescription'] : null;
         $this->container['service_id'] = isset($data['service_id']) ? $data['service_id'] : null;
+        $this->container['sum_length'] = isset($data['sum_length']) ? $data['sum_length'] : null;
+        $this->container['support_battery_type'] = isset($data['support_battery_type']) ? $data['support_battery_type'] : null;
     }
 
     /**
@@ -277,17 +259,8 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         if ($this->container['directions'] === null) {
             $invalidProperties[] = "'directions' can't be null";
         }
-        if ($this->container['fee_description'] === null) {
-            $invalidProperties[] = "'fee_description' can't be null";
-        }
-        if ($this->container['is_support_elec'] === null) {
-            $invalidProperties[] = "'is_support_elec' can't be null";
-        }
         if ($this->container['max_length'] === null) {
             $invalidProperties[] = "'max_length' can't be null";
-        }
-        if ($this->container['max_total_length'] === null) {
-            $invalidProperties[] = "'max_total_length' can't be null";
         }
         if ($this->container['max_weight'] === null) {
             $invalidProperties[] = "'max_weight' can't be null";
@@ -298,14 +271,14 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         if ($this->container['name_zh'] === null) {
             $invalidProperties[] = "'name_zh' can't be null";
         }
-        if ($this->container['picture'] === null) {
-            $invalidProperties[] = "'picture' can't be null";
-        }
-        if ($this->container['prescription'] === null) {
-            $invalidProperties[] = "'prescription' can't be null";
-        }
         if ($this->container['service_id'] === null) {
             $invalidProperties[] = "'service_id' can't be null";
+        }
+        if ($this->container['sum_length'] === null) {
+            $invalidProperties[] = "'sum_length' can't be null";
+        }
+        if ($this->container['support_battery_type'] === null) {
+            $invalidProperties[] = "'support_battery_type' can't be null";
         }
         return $invalidProperties;
     }
@@ -328,16 +301,7 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         if ($this->container['directions'] === null) {
             return false;
         }
-        if ($this->container['fee_description'] === null) {
-            return false;
-        }
-        if ($this->container['is_support_elec'] === null) {
-            return false;
-        }
         if ($this->container['max_length'] === null) {
-            return false;
-        }
-        if ($this->container['max_total_length'] === null) {
             return false;
         }
         if ($this->container['max_weight'] === null) {
@@ -349,13 +313,13 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         if ($this->container['name_zh'] === null) {
             return false;
         }
-        if ($this->container['picture'] === null) {
-            return false;
-        }
-        if ($this->container['prescription'] === null) {
-            return false;
-        }
         if ($this->container['service_id'] === null) {
+            return false;
+        }
+        if ($this->container['sum_length'] === null) {
+            return false;
+        }
+        if ($this->container['support_battery_type'] === null) {
             return false;
         }
         return true;
@@ -435,73 +399,25 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets fee_description
-     *
-     * @return string
-     */
-    public function getFeeDescription()
-    {
-        return $this->container['fee_description'];
-    }
-
-    /**
-     * Sets fee_description
-     *
-     * @param string $fee_description 计费方式描述
-     *
-     * @return $this
-     */
-    public function setFeeDescription($fee_description)
-    {
-        $this->container['fee_description'] = $fee_description;
-
-        return $this;
-    }
-
-    /**
-     * Gets incoterms
+     * Gets incoterm
      *
      * @return int
      */
-    public function getIncoterms()
+    public function getIncoterm()
     {
-        return $this->container['incoterms'];
+        return $this->container['incoterm'];
     }
 
     /**
-     * Sets incoterms
+     * Sets incoterm
      *
-     * @param int $incoterms DDP/DDU方式:0 - DDP and DDU;1 -DDP;2 - DDU
+     * @param int $incoterm DDP/DDU方式:0 - DDP and DDU;1 -DDP;2 - DDU
      *
      * @return $this
      */
-    public function setIncoterms($incoterms)
+    public function setIncoterm($incoterm)
     {
-        $this->container['incoterms'] = $incoterms;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_support_elec
-     *
-     * @return bool
-     */
-    public function getIsSupportElec()
-    {
-        return $this->container['is_support_elec'];
-    }
-
-    /**
-     * Sets is_support_elec
-     *
-     * @param bool $is_support_elec 是否支持带电
-     *
-     * @return $this
-     */
-    public function setIsSupportElec($is_support_elec)
-    {
-        $this->container['is_support_elec'] = $is_support_elec;
+        $this->container['incoterm'] = $incoterm;
 
         return $this;
     }
@@ -526,30 +442,6 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
     public function setMaxLength($max_length)
     {
         $this->container['max_length'] = $max_length;
-
-        return $this;
-    }
-
-    /**
-     * Gets max_total_length
-     *
-     * @return float
-     */
-    public function getMaxTotalLength()
-    {
-        return $this->container['max_total_length'];
-    }
-
-    /**
-     * Sets max_total_length
-     *
-     * @param float $max_total_length 三边之和上限（cm）
-     *
-     * @return $this
-     */
-    public function setMaxTotalLength($max_total_length)
-    {
-        $this->container['max_total_length'] = $max_total_length;
 
         return $this;
     }
@@ -627,54 +519,6 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets picture
-     *
-     * @return string
-     */
-    public function getPicture()
-    {
-        return $this->container['picture'];
-    }
-
-    /**
-     * Sets picture
-     *
-     * @param string $picture 图片BASE64编码
-     *
-     * @return $this
-     */
-    public function setPicture($picture)
-    {
-        $this->container['picture'] = $picture;
-
-        return $this;
-    }
-
-    /**
-     * Gets prescription
-     *
-     * @return string
-     */
-    public function getPrescription()
-    {
-        return $this->container['prescription'];
-    }
-
-    /**
-     * Sets prescription
-     *
-     * @param string $prescription 时效
-     *
-     * @return $this
-     */
-    public function setPrescription($prescription)
-    {
-        $this->container['prescription'] = $prescription;
-
-        return $this;
-    }
-
-    /**
      * Gets service_id
      *
      * @return string
@@ -694,6 +538,54 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
     public function setServiceId($service_id)
     {
         $this->container['service_id'] = $service_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets sum_length
+     *
+     * @return float
+     */
+    public function getSumLength()
+    {
+        return $this->container['sum_length'];
+    }
+
+    /**
+     * Sets sum_length
+     *
+     * @param float $sum_length 三边之和上限（cm）
+     *
+     * @return $this
+     */
+    public function setSumLength($sum_length)
+    {
+        $this->container['sum_length'] = $sum_length;
+
+        return $this;
+    }
+
+    /**
+     * Gets support_battery_type
+     *
+     * @return string
+     */
+    public function getSupportBatteryType()
+    {
+        return $this->container['support_battery_type'];
+    }
+
+    /**
+     * Sets support_battery_type
+     *
+     * @param string $support_battery_type 是否支持带电
+     *
+     * @return $this
+     */
+    public function setSupportBatteryType($support_battery_type)
+    {
+        $this->container['support_battery_type'] = $support_battery_type;
 
         return $this;
     }

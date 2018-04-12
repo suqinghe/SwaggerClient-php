@@ -224,7 +224,7 @@ class GetPackageDetailRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets package_id
      *
-     * @param string $package_id åè£¹ID
+     * @param string $package_id 包裹ID
      *
      * @return $this
      */

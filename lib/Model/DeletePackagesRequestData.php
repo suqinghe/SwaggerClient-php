@@ -224,7 +224,7 @@ class DeletePackagesRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets package_ids
      *
-     * @param string[] $package_ids éè¦äº¤è¿çåè£¹IDåè¡¨
+     * @param string[] $package_ids 需要交运的包裹ID列表
      *
      * @return $this
      */

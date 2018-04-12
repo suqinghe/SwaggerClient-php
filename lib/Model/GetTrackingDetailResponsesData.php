@@ -36,7 +36,7 @@ use \Swagger\Client\ObjectSerializer;
  * GetTrackingDetailResponsesData Class Doc Comment
  *
  * @category Class
- * @description ç©æµè·è¸ª
+ * @description 物流跟踪
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -315,7 +315,7 @@ class GetTrackingDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets city
      *
-     * @param string $city åè£¹æå¨å¸
+     * @param string $city 包裹所在市
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class GetTrackingDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string $country åè£¹æå¨å½å®¶
+     * @param string $country 包裹所在国家
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class GetTrackingDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets description_en
      *
-     * @param string $description_en è±ææè¿°
+     * @param string $description_en 英文描述
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class GetTrackingDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets description_zh
      *
-     * @param string $description_zh ä¸­ææè¿°
+     * @param string $description_zh 中文描述
      *
      * @return $this
      */
@@ -411,7 +411,7 @@ class GetTrackingDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets district
      *
-     * @param string $district åè£¹æå¨åºå¿
+     * @param string $district 包裹所在区县
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class GetTrackingDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets event_time
      *
-     * @param \DateTime $event_time æ¶é´
+     * @param \DateTime $event_time 时间
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class GetTrackingDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets provence
      *
-     * @param string $provence åè£¹æå¨ç/å·
+     * @param string $provence 包裹所在省/州
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class GetTrackingDetailResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status ç©æµè·è¸ªç¶æ
+     * @param string $status 物流跟踪状态
      *
      * @return $this
      */

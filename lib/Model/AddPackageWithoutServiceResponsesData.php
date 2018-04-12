@@ -58,6 +58,7 @@ class AddPackageWithoutServiceResponsesData implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'unavailable_service_list' => '\Swagger\Client\Model\UnavailableServiceResponses[]',
         'available_service_list' => '\Swagger\Client\Model\AvailableServiceResponses[]',
         'package_id' => 'string'
     ];
@@ -68,6 +69,7 @@ class AddPackageWithoutServiceResponsesData implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'unavailable_service_list' => null,
         'available_service_list' => null,
         'package_id' => null
     ];
@@ -99,6 +101,7 @@ class AddPackageWithoutServiceResponsesData implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $attributeMap = [
+        'unavailable_service_list' => 'unavailableServiceList',
         'available_service_list' => 'availableServiceList',
         'package_id' => 'packageId'
     ];
@@ -109,6 +112,7 @@ class AddPackageWithoutServiceResponsesData implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $setters = [
+        'unavailable_service_list' => 'setUnavailableServiceList',
         'available_service_list' => 'setAvailableServiceList',
         'package_id' => 'setPackageId'
     ];
@@ -119,6 +123,7 @@ class AddPackageWithoutServiceResponsesData implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $getters = [
+        'unavailable_service_list' => 'getUnavailableServiceList',
         'available_service_list' => 'getAvailableServiceList',
         'package_id' => 'getPackageId'
     ];
@@ -183,6 +188,7 @@ class AddPackageWithoutServiceResponsesData implements ModelInterface, ArrayAcce
      */
     public function __construct(array $data = null)
     {
+        $this->container['unavailable_service_list'] = isset($data['unavailable_service_list']) ? $data['unavailable_service_list'] : null;
         $this->container['available_service_list'] = isset($data['available_service_list']) ? $data['available_service_list'] : null;
         $this->container['package_id'] = isset($data['package_id']) ? $data['package_id'] : null;
     }
@@ -196,6 +202,9 @@ class AddPackageWithoutServiceResponsesData implements ModelInterface, ArrayAcce
     {
         $invalidProperties = [];
 
+        if ($this->container['unavailable_service_list'] === null) {
+            $invalidProperties[] = "'unavailable_service_list' can't be null";
+        }
         if ($this->container['available_service_list'] === null) {
             $invalidProperties[] = "'available_service_list' can't be null";
         }
@@ -214,6 +223,9 @@ class AddPackageWithoutServiceResponsesData implements ModelInterface, ArrayAcce
     public function valid()
     {
 
+        if ($this->container['unavailable_service_list'] === null) {
+            return false;
+        }
         if ($this->container['available_service_list'] === null) {
             return false;
         }
@@ -223,6 +235,30 @@ class AddPackageWithoutServiceResponsesData implements ModelInterface, ArrayAcce
         return true;
     }
 
+
+    /**
+     * Gets unavailable_service_list
+     *
+     * @return \Swagger\Client\Model\UnavailableServiceResponses[]
+     */
+    public function getUnavailableServiceList()
+    {
+        return $this->container['unavailable_service_list'];
+    }
+
+    /**
+     * Sets unavailable_service_list
+     *
+     * @param \Swagger\Client\Model\UnavailableServiceResponses[] $unavailable_service_list 不可用物流服务
+     *
+     * @return $this
+     */
+    public function setUnavailableServiceList($unavailable_service_list)
+    {
+        $this->container['unavailable_service_list'] = $unavailable_service_list;
+
+        return $this;
+    }
 
     /**
      * Gets available_service_list
@@ -237,7 +273,7 @@ class AddPackageWithoutServiceResponsesData implements ModelInterface, ArrayAcce
     /**
      * Sets available_service_list
      *
-     * @param \Swagger\Client\Model\AvailableServiceResponses[] $available_service_list available_service_list
+     * @param \Swagger\Client\Model\AvailableServiceResponses[] $available_service_list 可用物流服务
      *
      * @return $this
      */

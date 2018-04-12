@@ -525,7 +525,7 @@ class ShipToAddressRequest implements ModelInterface, ArrayAccess
     /**
      * Sets province
      *
-     * @param string $province 省
+     * @param string $province 省,国家为德国时可选
      *
      * @return $this
      */

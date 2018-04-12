@@ -224,7 +224,7 @@ class GetServiceListRequestRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets page_number
      *
-     * @param int $page_number é¡µç ï¼é»è®¤å¼ï¼1
+     * @param int $page_number 页码，默认值：1
      *
      * @return $this
      */
@@ -248,7 +248,7 @@ class GetServiceListRequestRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets page_size
      *
-     * @param int $page_size åé¡µå¤§å°ï¼é»è®¤å¼ï¼50ï¼æå¤§å¼1000
+     * @param int $page_size 分页大小，默认值：50，最大值1000
      *
      * @return $this
      */

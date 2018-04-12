@@ -1,6 +1,6 @@
 <?php
 /**
- * GetAddressPreferenceListResponsesData
+ * UnavailableServiceResponses
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * GetAddressPreferenceListResponsesData Class Doc Comment
+ * UnavailableServiceResponses Class Doc Comment
  *
  * @category Class
- * @description 地址分页信息
+ * @description 不可用物流服务
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class GetAddressPreferenceListResponsesData implements ModelInterface, ArrayAccess
+class UnavailableServiceResponses implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class GetAddressPreferenceListResponsesData implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $swaggerModelName = 'GetAddressPreferenceListResponsesData';
+    protected static $swaggerModelName = 'UnavailableServiceResponses';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,11 +58,10 @@ class GetAddressPreferenceListResponsesData implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address_list' => '\Swagger\Client\Model\AddressInfoResponses[]',
-        'page_number' => 'int',
-        'page_size' => 'int',
-        'toal_page_number' => 'int',
-        'total_count' => 'int'
+        'service_id' => 'string',
+        'service_name_en' => 'string',
+        'service_name_zh' => 'string',
+        'unavailable_reason' => 'string'
     ];
 
     /**
@@ -71,11 +70,10 @@ class GetAddressPreferenceListResponsesData implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'address_list' => null,
-        'page_number' => 'int32',
-        'page_size' => 'int32',
-        'toal_page_number' => 'int32',
-        'total_count' => 'int32'
+        'service_id' => null,
+        'service_name_en' => null,
+        'service_name_zh' => null,
+        'unavailable_reason' => null
     ];
 
     /**
@@ -105,11 +103,10 @@ class GetAddressPreferenceListResponsesData implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $attributeMap = [
-        'address_list' => 'addressList',
-        'page_number' => 'pageNumber',
-        'page_size' => 'pageSize',
-        'toal_page_number' => 'toalPageNumber',
-        'total_count' => 'totalCount'
+        'service_id' => 'serviceId',
+        'service_name_en' => 'serviceNameEn',
+        'service_name_zh' => 'serviceNameZh',
+        'unavailable_reason' => 'unavailableReason'
     ];
 
     /**
@@ -118,11 +115,10 @@ class GetAddressPreferenceListResponsesData implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $setters = [
-        'address_list' => 'setAddressList',
-        'page_number' => 'setPageNumber',
-        'page_size' => 'setPageSize',
-        'toal_page_number' => 'setToalPageNumber',
-        'total_count' => 'setTotalCount'
+        'service_id' => 'setServiceId',
+        'service_name_en' => 'setServiceNameEn',
+        'service_name_zh' => 'setServiceNameZh',
+        'unavailable_reason' => 'setUnavailableReason'
     ];
 
     /**
@@ -131,11 +127,10 @@ class GetAddressPreferenceListResponsesData implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $getters = [
-        'address_list' => 'getAddressList',
-        'page_number' => 'getPageNumber',
-        'page_size' => 'getPageSize',
-        'toal_page_number' => 'getToalPageNumber',
-        'total_count' => 'getTotalCount'
+        'service_id' => 'getServiceId',
+        'service_name_en' => 'getServiceNameEn',
+        'service_name_zh' => 'getServiceNameZh',
+        'unavailable_reason' => 'getUnavailableReason'
     ];
 
     /**
@@ -198,11 +193,10 @@ class GetAddressPreferenceListResponsesData implements ModelInterface, ArrayAcce
      */
     public function __construct(array $data = null)
     {
-        $this->container['address_list'] = isset($data['address_list']) ? $data['address_list'] : null;
-        $this->container['page_number'] = isset($data['page_number']) ? $data['page_number'] : null;
-        $this->container['page_size'] = isset($data['page_size']) ? $data['page_size'] : null;
-        $this->container['toal_page_number'] = isset($data['toal_page_number']) ? $data['toal_page_number'] : null;
-        $this->container['total_count'] = isset($data['total_count']) ? $data['total_count'] : null;
+        $this->container['service_id'] = isset($data['service_id']) ? $data['service_id'] : null;
+        $this->container['service_name_en'] = isset($data['service_name_en']) ? $data['service_name_en'] : null;
+        $this->container['service_name_zh'] = isset($data['service_name_zh']) ? $data['service_name_zh'] : null;
+        $this->container['unavailable_reason'] = isset($data['unavailable_reason']) ? $data['unavailable_reason'] : null;
     }
 
     /**
@@ -214,20 +208,17 @@ class GetAddressPreferenceListResponsesData implements ModelInterface, ArrayAcce
     {
         $invalidProperties = [];
 
-        if ($this->container['address_list'] === null) {
-            $invalidProperties[] = "'address_list' can't be null";
+        if ($this->container['service_id'] === null) {
+            $invalidProperties[] = "'service_id' can't be null";
         }
-        if ($this->container['page_number'] === null) {
-            $invalidProperties[] = "'page_number' can't be null";
+        if ($this->container['service_name_en'] === null) {
+            $invalidProperties[] = "'service_name_en' can't be null";
         }
-        if ($this->container['page_size'] === null) {
-            $invalidProperties[] = "'page_size' can't be null";
+        if ($this->container['service_name_zh'] === null) {
+            $invalidProperties[] = "'service_name_zh' can't be null";
         }
-        if ($this->container['toal_page_number'] === null) {
-            $invalidProperties[] = "'toal_page_number' can't be null";
-        }
-        if ($this->container['total_count'] === null) {
-            $invalidProperties[] = "'total_count' can't be null";
+        if ($this->container['unavailable_reason'] === null) {
+            $invalidProperties[] = "'unavailable_reason' can't be null";
         }
         return $invalidProperties;
     }
@@ -241,19 +232,16 @@ class GetAddressPreferenceListResponsesData implements ModelInterface, ArrayAcce
     public function valid()
     {
 
-        if ($this->container['address_list'] === null) {
+        if ($this->container['service_id'] === null) {
             return false;
         }
-        if ($this->container['page_number'] === null) {
+        if ($this->container['service_name_en'] === null) {
             return false;
         }
-        if ($this->container['page_size'] === null) {
+        if ($this->container['service_name_zh'] === null) {
             return false;
         }
-        if ($this->container['toal_page_number'] === null) {
-            return false;
-        }
-        if ($this->container['total_count'] === null) {
+        if ($this->container['unavailable_reason'] === null) {
             return false;
         }
         return true;
@@ -261,121 +249,97 @@ class GetAddressPreferenceListResponsesData implements ModelInterface, ArrayAcce
 
 
     /**
-     * Gets address_list
+     * Gets service_id
      *
-     * @return \Swagger\Client\Model\AddressInfoResponses[]
+     * @return string
      */
-    public function getAddressList()
+    public function getServiceId()
     {
-        return $this->container['address_list'];
+        return $this->container['service_id'];
     }
 
     /**
-     * Sets address_list
+     * Sets service_id
      *
-     * @param \Swagger\Client\Model\AddressInfoResponses[] $address_list address_list
+     * @param string $service_id 物流服务ID
      *
      * @return $this
      */
-    public function setAddressList($address_list)
+    public function setServiceId($service_id)
     {
-        $this->container['address_list'] = $address_list;
+        $this->container['service_id'] = $service_id;
 
         return $this;
     }
 
     /**
-     * Gets page_number
+     * Gets service_name_en
      *
-     * @return int
+     * @return string
      */
-    public function getPageNumber()
+    public function getServiceNameEn()
     {
-        return $this->container['page_number'];
+        return $this->container['service_name_en'];
     }
 
     /**
-     * Sets page_number
+     * Sets service_name_en
      *
-     * @param int $page_number 当前页码
+     * @param string $service_name_en 物流服务名称（英文）
      *
      * @return $this
      */
-    public function setPageNumber($page_number)
+    public function setServiceNameEn($service_name_en)
     {
-        $this->container['page_number'] = $page_number;
+        $this->container['service_name_en'] = $service_name_en;
 
         return $this;
     }
 
     /**
-     * Gets page_size
+     * Gets service_name_zh
      *
-     * @return int
+     * @return string
      */
-    public function getPageSize()
+    public function getServiceNameZh()
     {
-        return $this->container['page_size'];
+        return $this->container['service_name_zh'];
     }
 
     /**
-     * Sets page_size
+     * Sets service_name_zh
      *
-     * @param int $page_size 当前分页大小
+     * @param string $service_name_zh 物流服务名称（中文）
      *
      * @return $this
      */
-    public function setPageSize($page_size)
+    public function setServiceNameZh($service_name_zh)
     {
-        $this->container['page_size'] = $page_size;
+        $this->container['service_name_zh'] = $service_name_zh;
 
         return $this;
     }
 
     /**
-     * Gets toal_page_number
+     * Gets unavailable_reason
      *
-     * @return int
+     * @return string
      */
-    public function getToalPageNumber()
+    public function getUnavailableReason()
     {
-        return $this->container['toal_page_number'];
+        return $this->container['unavailable_reason'];
     }
 
     /**
-     * Sets toal_page_number
+     * Sets unavailable_reason
      *
-     * @param int $toal_page_number 总页数
+     * @param string $unavailable_reason 不可用原因
      *
      * @return $this
      */
-    public function setToalPageNumber($toal_page_number)
+    public function setUnavailableReason($unavailable_reason)
     {
-        $this->container['toal_page_number'] = $toal_page_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_count
-     *
-     * @return int
-     */
-    public function getTotalCount()
-    {
-        return $this->container['total_count'];
-    }
-
-    /**
-     * Sets total_count
-     *
-     * @param int $total_count 总记录数
-     *
-     * @return $this
-     */
-    public function setTotalCount($total_count)
-    {
-        $this->container['total_count'] = $total_count;
+        $this->container['unavailable_reason'] = $unavailable_reason;
 
         return $this;
     }

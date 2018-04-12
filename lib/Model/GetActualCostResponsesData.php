@@ -290,7 +290,7 @@ class GetActualCostResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param float $amount äº¤æéé¢
+     * @param float $amount 交易金额
      *
      * @return $this
      */
@@ -314,7 +314,7 @@ class GetActualCostResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets billing_time
      *
-     * @param \DateTime $billing_time äº¤ææ¶é´
+     * @param \DateTime $billing_time 交易时间
      *
      * @return $this
      */
@@ -338,7 +338,7 @@ class GetActualCostResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets currency_code
      *
-     * @param string $currency_code è´§å¸ç¬¦å·ï¼CNYï¼HKDï¼TWD
+     * @param string $currency_code 货币符号：CNY，HKD，TWD
      *
      * @return $this
      */
@@ -362,7 +362,7 @@ class GetActualCostResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param string $message æå®ç»ææ¶æ¯
+     * @param string $message 指定结果消息
      *
      * @return $this
      */
@@ -386,7 +386,7 @@ class GetActualCostResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets remark
      *
-     * @param string $remark å¤æ³¨
+     * @param string $remark 备注
      *
      * @return $this
      */
@@ -410,7 +410,7 @@ class GetActualCostResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets result_code
      *
-     * @param int $result_code æå®ç»æ
+     * @param int $result_code 指定结果
      *
      * @return $this
      */
@@ -434,7 +434,7 @@ class GetActualCostResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_number
      *
-     * @param string $tracking_number åè£¹è·è¸ªå·
+     * @param string $tracking_number 包裹跟踪号
      *
      * @return $this
      */

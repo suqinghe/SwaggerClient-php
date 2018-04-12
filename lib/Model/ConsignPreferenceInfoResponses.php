@@ -36,7 +36,7 @@ use \Swagger\Client\ObjectSerializer;
  * ConsignPreferenceInfoResponses Class Doc Comment
  *
  * @category Class
- * @description äº¤è¿åå¥½
+ * @description 交运偏好
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -273,7 +273,7 @@ class ConsignPreferenceInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets consign_preference_id
      *
-     * @param string $consign_preference_id äº¤è¿åå¥½ID
+     * @param string $consign_preference_id 交运偏好ID
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class ConsignPreferenceInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets dropoff_site_id
      *
-     * @param string $dropoff_site_id èªéç«ç¹ID,å½äº¤è¿æ¹å¼ä¸ºåå®¶èªéæ¶å¿å¡«
+     * @param string $dropoff_site_id 自送站点ID,当交运方式为卖家自送时必填
      *
      * @return $this
      */
@@ -321,7 +321,7 @@ class ConsignPreferenceInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name äº¤è¿åå¥½åç§°
+     * @param string $name 交运偏好名称
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class ConsignPreferenceInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets pickup_time
      *
-     * @param int $pickup_time æ½æ¶æ¶é´æ®µ:1 - 14:00-16:00; 2 - 16:00-18:00;å½äº¤è¿æ¹å¼ä¸ºä¸é¨æ½æ¶æ¶å¿å¡«
+     * @param int $pickup_time 揽收时间段:1 - 14:00-16:00; 2 - 16:00-18:00;当交运方式为上门揽收时必填
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class ConsignPreferenceInfoResponses implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param int $type äº¤è¿æ¹å¼ï¼å¯ç¨å¼:0 - ä¸é¨æ½æ¶;1 - åå®¶èªé
+     * @param int $type 交运方式，可用值:0 - 上门揽收;1 - 卖家自送
      *
      * @return $this
      */

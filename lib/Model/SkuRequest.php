@@ -59,8 +59,8 @@ class SkuRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'height' => 'float',
-        'is_li_battery' => 'bool',
         'length' => 'float',
+        'li_battery_type' => 'int',
         'name_en' => 'string',
         'name_zh' => 'string',
         'origin' => 'string',
@@ -79,8 +79,8 @@ class SkuRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'height' => null,
-        'is_li_battery' => null,
         'length' => null,
+        'li_battery_type' => 'int32',
         'name_en' => null,
         'name_zh' => null,
         'origin' => null,
@@ -120,8 +120,8 @@ class SkuRequest implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'height' => 'height',
-        'is_li_battery' => 'isLiBattery',
         'length' => 'length',
+        'li_battery_type' => 'liBatteryType',
         'name_en' => 'nameEn',
         'name_zh' => 'nameZh',
         'origin' => 'origin',
@@ -140,8 +140,8 @@ class SkuRequest implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'height' => 'setHeight',
-        'is_li_battery' => 'setIsLiBattery',
         'length' => 'setLength',
+        'li_battery_type' => 'setLiBatteryType',
         'name_en' => 'setNameEn',
         'name_zh' => 'setNameZh',
         'origin' => 'setOrigin',
@@ -160,8 +160,8 @@ class SkuRequest implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'height' => 'getHeight',
-        'is_li_battery' => 'getIsLiBattery',
         'length' => 'getLength',
+        'li_battery_type' => 'getLiBatteryType',
         'name_en' => 'getNameEn',
         'name_zh' => 'getNameZh',
         'origin' => 'getOrigin',
@@ -234,8 +234,8 @@ class SkuRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
-        $this->container['is_li_battery'] = isset($data['is_li_battery']) ? $data['is_li_battery'] : null;
         $this->container['length'] = isset($data['length']) ? $data['length'] : null;
+        $this->container['li_battery_type'] = isset($data['li_battery_type']) ? $data['li_battery_type'] : null;
         $this->container['name_en'] = isset($data['name_en']) ? $data['name_en'] : null;
         $this->container['name_zh'] = isset($data['name_zh']) ? $data['name_zh'] : null;
         $this->container['origin'] = isset($data['origin']) ? $data['origin'] : null;
@@ -256,8 +256,8 @@ class SkuRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['is_li_battery'] === null) {
-            $invalidProperties[] = "'is_li_battery' can't be null";
+        if ($this->container['li_battery_type'] === null) {
+            $invalidProperties[] = "'li_battery_type' can't be null";
         }
         if ($this->container['name_en'] === null) {
             $invalidProperties[] = "'name_en' can't be null";
@@ -286,7 +286,7 @@ class SkuRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['is_li_battery'] === null) {
+        if ($this->container['li_battery_type'] === null) {
             return false;
         }
         if ($this->container['name_en'] === null) {
@@ -333,30 +333,6 @@ class SkuRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets is_li_battery
-     *
-     * @return bool
-     */
-    public function getIsLiBattery()
-    {
-        return $this->container['is_li_battery'];
-    }
-
-    /**
-     * Sets is_li_battery
-     *
-     * @param bool $is_li_battery 是否带锂电池
-     *
-     * @return $this
-     */
-    public function setIsLiBattery($is_li_battery)
-    {
-        $this->container['is_li_battery'] = $is_li_battery;
-
-        return $this;
-    }
-
-    /**
      * Gets length
      *
      * @return float
@@ -376,6 +352,30 @@ class SkuRequest implements ModelInterface, ArrayAccess
     public function setLength($length)
     {
         $this->container['length'] = $length;
+
+        return $this;
+    }
+
+    /**
+     * Gets li_battery_type
+     *
+     * @return int
+     */
+    public function getLiBatteryType()
+    {
+        return $this->container['li_battery_type'];
+    }
+
+    /**
+     * Sets li_battery_type
+     *
+     * @param int $li_battery_type 带电类型（0:无锂电池1:内置电池2:纯电池3:配套电池）
+     *
+     * @return $this
+     */
+    public function setLiBatteryType($li_battery_type)
+    {
+        $this->container['li_battery_type'] = $li_battery_type;
 
         return $this;
     }

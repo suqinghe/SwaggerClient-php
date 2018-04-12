@@ -17,14 +17,14 @@ class AddConsignPreference extends AbstractController
 {
     function index(){
         try {
-            $url='https://sandbox.edisebay.com/v1/api';
-            $authorization="TGT-16-ibrFue4aM0rdqQGAxRteMa9x2NdOP9Jd1MzNA2G4dMyGrST1Yc-sbpassport.eis.cn";
+            $url='https://istslb01.eastasia.cloudapp.azure.com/v1.5/api';
+            $authorization="TGT-16-95IUOO5EflttkMNeT2p7bMxhBeRyiErVFYWt1byThbd0HKAjje-qapassport.eis.cn";
             $client = new DefaultEbayClient($url,$authorization);
             
             $req= new AddConsignPreferenceRequest();
             $req->setTimestamp(time());
             $req->setMessageId('11');
-            $req->setEbayId('22');
+            $req->setEbayId('wilzhan-60');
             $data=new AddConsignPreferenceRequestData();
             $data->setType(0); //上门揽收
             $data->setPickupTime(1); //揽收时间段:1 - 14:00-16:00; 2 - 16:00-18:00;当交运方式为上门揽收时必填

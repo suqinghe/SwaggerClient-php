@@ -224,7 +224,7 @@ class GetTrackingDetailRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_number
      *
-     * @param string $tracking_number åè£¹è·è¸ªå·
+     * @param string $tracking_number 包裹跟踪号
      *
      * @return $this
      */

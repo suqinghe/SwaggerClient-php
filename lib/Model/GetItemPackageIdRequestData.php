@@ -36,7 +36,7 @@ use \Swagger\Client\ObjectSerializer;
  * GetItemPackageIdRequestData Class Doc Comment
  *
  * @category Class
- * @description ç©åä¿¡æ¯
+ * @description 物品信息
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -237,7 +237,7 @@ class GetItemPackageIdRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets item_id
      *
-     * @param string $item_id eBayç©åå·
+     * @param string $item_id eBay物品号
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class GetItemPackageIdRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_id
      *
-     * @param string $transaction_id eBayäº¤æå·
+     * @param string $transaction_id eBay交易号
      *
      * @return $this
      */

@@ -224,7 +224,7 @@ class CancelPackagesRequestData implements ModelInterface, ArrayAccess
     /**
      * Sets package_ids
      *
-     * @param string[] $package_ids 需要取消的包裹ID列¡¨
+     * @param string[] $package_ids 需要取消的包裹ID列表
      *
      * @return $this
      */

@@ -242,7 +242,7 @@ class GetPackageStatusResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets note
      *
-     * @param string $note è¡¥åä¿¡æ¯
+     * @param string $note 补充信息
      *
      * @return $this
      */
@@ -266,7 +266,7 @@ class GetPackageStatusResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets package_id
      *
-     * @param string $package_id åè£¹ID
+     * @param string $package_id 包裹ID
      *
      * @return $this
      */
@@ -290,7 +290,7 @@ class GetPackageStatusResponsesData implements ModelInterface, ArrayAccess
     /**
      * Sets package_status
      *
-     * @param int $package_status åè£¹å½åç¶æï¼è¿åå¼ï¼ 0 - ä¿¡æ¯ä¸å®æ´;1 - å¾éæ©ç©æµæå¡;2 - å¾ç³è¯·è¿åå·;3 - å¾äº¤è¿;4 - æ å¯ç¨ç©æµæå¡;5 - é¢ç³æ¥æªéè¿;6 - å¾åä»¶;7 - æ½æ¶æå;8 - è¿è¾ä¸­;9 - å·²å¦¥æ;10 - æéå¤±è´¥;11 - å·²å é¤;99 - åè£¹å¼å¸¸
+     * @param int $package_status 包裹当前状态，返回值： 0 - 信息不完整;1 - 待选择物流服务;2 - 待申请运单号;3 - 待交运;4 - 无可用物流服务;5 - 预申报未通过;6 - 待取件;7 - 揽收成功;8 - 运输中;9 - 已妥投;10 - 投递失败;11 - 已删除;99 - 包裹异常
      *
      * @return $this
      */

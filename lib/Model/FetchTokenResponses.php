@@ -248,7 +248,7 @@ class FetchTokenResponses implements ModelInterface, ArrayAccess
     /**
      * Sets expire_date
      *
-     * @param \DateTime $expire_date æææï¼12ä¸ªæï¼
+     * @param \DateTime $expire_date 有效期（12个月）
      *
      * @return $this
      */
@@ -296,7 +296,7 @@ class FetchTokenResponses implements ModelInterface, ArrayAccess
     /**
      * Sets token
      *
-     * @param string $token ä»¤ç
+     * @param string $token 令牌
      *
      * @return $this
      */
