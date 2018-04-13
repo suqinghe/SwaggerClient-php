@@ -61,13 +61,13 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         'description_en' => 'string',
         'description_zh' => 'string',
         'directions' => '\Swagger\Client\Model\DirectionsResponses[]',
-        'incoterm' => 'int',
+        'incoterms' => 'int',
         'max_length' => 'float',
+        'max_total_length' => 'float',
         'max_weight' => 'float',
         'name_en' => 'string',
         'name_zh' => 'string',
         'service_id' => 'string',
-        'sum_length' => 'float',
         'support_battery_type' => 'string'
     ];
 
@@ -80,13 +80,13 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         'description_en' => null,
         'description_zh' => null,
         'directions' => null,
-        'incoterm' => 'int32',
+        'incoterms' => 'int32',
         'max_length' => null,
+        'max_total_length' => null,
         'max_weight' => null,
         'name_en' => null,
         'name_zh' => null,
         'service_id' => null,
-        'sum_length' => null,
         'support_battery_type' => null
     ];
 
@@ -120,13 +120,13 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         'description_en' => 'descriptionEn',
         'description_zh' => 'descriptionZh',
         'directions' => 'directions',
-        'incoterm' => 'incoterm',
+        'incoterms' => 'incoterms',
         'max_length' => 'maxLength',
+        'max_total_length' => 'maxTotalLength',
         'max_weight' => 'maxWeight',
         'name_en' => 'nameEn',
         'name_zh' => 'nameZh',
         'service_id' => 'serviceId',
-        'sum_length' => 'sumLength',
         'support_battery_type' => 'supportBatteryType'
     ];
 
@@ -139,13 +139,13 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         'description_en' => 'setDescriptionEn',
         'description_zh' => 'setDescriptionZh',
         'directions' => 'setDirections',
-        'incoterm' => 'setIncoterm',
+        'incoterms' => 'setIncoterms',
         'max_length' => 'setMaxLength',
+        'max_total_length' => 'setMaxTotalLength',
         'max_weight' => 'setMaxWeight',
         'name_en' => 'setNameEn',
         'name_zh' => 'setNameZh',
         'service_id' => 'setServiceId',
-        'sum_length' => 'setSumLength',
         'support_battery_type' => 'setSupportBatteryType'
     ];
 
@@ -158,13 +158,13 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         'description_en' => 'getDescriptionEn',
         'description_zh' => 'getDescriptionZh',
         'directions' => 'getDirections',
-        'incoterm' => 'getIncoterm',
+        'incoterms' => 'getIncoterms',
         'max_length' => 'getMaxLength',
+        'max_total_length' => 'getMaxTotalLength',
         'max_weight' => 'getMaxWeight',
         'name_en' => 'getNameEn',
         'name_zh' => 'getNameZh',
         'service_id' => 'getServiceId',
-        'sum_length' => 'getSumLength',
         'support_battery_type' => 'getSupportBatteryType'
     ];
 
@@ -231,13 +231,13 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         $this->container['description_en'] = isset($data['description_en']) ? $data['description_en'] : null;
         $this->container['description_zh'] = isset($data['description_zh']) ? $data['description_zh'] : null;
         $this->container['directions'] = isset($data['directions']) ? $data['directions'] : null;
-        $this->container['incoterm'] = isset($data['incoterm']) ? $data['incoterm'] : null;
+        $this->container['incoterms'] = isset($data['incoterms']) ? $data['incoterms'] : null;
         $this->container['max_length'] = isset($data['max_length']) ? $data['max_length'] : null;
+        $this->container['max_total_length'] = isset($data['max_total_length']) ? $data['max_total_length'] : null;
         $this->container['max_weight'] = isset($data['max_weight']) ? $data['max_weight'] : null;
         $this->container['name_en'] = isset($data['name_en']) ? $data['name_en'] : null;
         $this->container['name_zh'] = isset($data['name_zh']) ? $data['name_zh'] : null;
         $this->container['service_id'] = isset($data['service_id']) ? $data['service_id'] : null;
-        $this->container['sum_length'] = isset($data['sum_length']) ? $data['sum_length'] : null;
         $this->container['support_battery_type'] = isset($data['support_battery_type']) ? $data['support_battery_type'] : null;
     }
 
@@ -262,6 +262,9 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         if ($this->container['max_length'] === null) {
             $invalidProperties[] = "'max_length' can't be null";
         }
+        if ($this->container['max_total_length'] === null) {
+            $invalidProperties[] = "'max_total_length' can't be null";
+        }
         if ($this->container['max_weight'] === null) {
             $invalidProperties[] = "'max_weight' can't be null";
         }
@@ -273,9 +276,6 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         }
         if ($this->container['service_id'] === null) {
             $invalidProperties[] = "'service_id' can't be null";
-        }
-        if ($this->container['sum_length'] === null) {
-            $invalidProperties[] = "'sum_length' can't be null";
         }
         if ($this->container['support_battery_type'] === null) {
             $invalidProperties[] = "'support_battery_type' can't be null";
@@ -304,6 +304,9 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
         if ($this->container['max_length'] === null) {
             return false;
         }
+        if ($this->container['max_total_length'] === null) {
+            return false;
+        }
         if ($this->container['max_weight'] === null) {
             return false;
         }
@@ -314,9 +317,6 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
             return false;
         }
         if ($this->container['service_id'] === null) {
-            return false;
-        }
-        if ($this->container['sum_length'] === null) {
             return false;
         }
         if ($this->container['support_battery_type'] === null) {
@@ -399,25 +399,25 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets incoterm
+     * Gets incoterms
      *
      * @return int
      */
-    public function getIncoterm()
+    public function getIncoterms()
     {
-        return $this->container['incoterm'];
+        return $this->container['incoterms'];
     }
 
     /**
-     * Sets incoterm
+     * Sets incoterms
      *
-     * @param int $incoterm DDP/DDU方式:0 - DDP and DDU;1 -DDP;2 - DDU
+     * @param int $incoterms DDP/DDU方式:0 - DDP and DDU;1 -DDP;2 - DDU
      *
      * @return $this
      */
-    public function setIncoterm($incoterm)
+    public function setIncoterms($incoterms)
     {
-        $this->container['incoterm'] = $incoterm;
+        $this->container['incoterms'] = $incoterms;
 
         return $this;
     }
@@ -442,6 +442,30 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
     public function setMaxLength($max_length)
     {
         $this->container['max_length'] = $max_length;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_total_length
+     *
+     * @return float
+     */
+    public function getMaxTotalLength()
+    {
+        return $this->container['max_total_length'];
+    }
+
+    /**
+     * Sets max_total_length
+     *
+     * @param float $max_total_length 三边之和上限（cm）
+     *
+     * @return $this
+     */
+    public function setMaxTotalLength($max_total_length)
+    {
+        $this->container['max_total_length'] = $max_total_length;
 
         return $this;
     }
@@ -538,30 +562,6 @@ class ServiceInfoResponses implements ModelInterface, ArrayAccess
     public function setServiceId($service_id)
     {
         $this->container['service_id'] = $service_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets sum_length
-     *
-     * @return float
-     */
-    public function getSumLength()
-    {
-        return $this->container['sum_length'];
-    }
-
-    /**
-     * Sets sum_length
-     *
-     * @param float $sum_length 三边之和上限（cm）
-     *
-     * @return $this
-     */
-    public function setSumLength($sum_length)
-    {
-        $this->container['sum_length'] = $sum_length;
 
         return $this;
     }

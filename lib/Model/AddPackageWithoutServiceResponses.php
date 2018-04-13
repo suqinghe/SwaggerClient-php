@@ -57,8 +57,8 @@ class AddPackageWithoutServiceResponses implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => '\Swagger\Client\Model\AddPackageWithoutServiceResponsesData',
-        'status' => '\Swagger\Client\Model\ResponsesStatus'
+        'status' => '\Swagger\Client\Model\ResponsesStatus',
+        'data' => '\Swagger\Client\Model\AddPackageWithoutServiceResponsesData'
     ];
 
     /**
@@ -67,8 +67,8 @@ class AddPackageWithoutServiceResponses implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'data' => null,
-        'status' => null
+        'status' => null,
+        'data' => null
     ];
 
     /**
@@ -98,8 +98,8 @@ class AddPackageWithoutServiceResponses implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'status' => 'status'
+        'status' => 'status',
+        'data' => 'data'
     ];
 
     /**
@@ -108,8 +108,8 @@ class AddPackageWithoutServiceResponses implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'status' => 'setStatus'
+        'status' => 'setStatus',
+        'data' => 'setData'
     ];
 
     /**
@@ -118,8 +118,8 @@ class AddPackageWithoutServiceResponses implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'status' => 'getStatus'
+        'status' => 'getStatus',
+        'data' => 'getData'
     ];
 
     /**
@@ -182,8 +182,8 @@ class AddPackageWithoutServiceResponses implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -195,11 +195,11 @@ class AddPackageWithoutServiceResponses implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
+        }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
         }
         return $invalidProperties;
     }
@@ -213,39 +213,15 @@ class AddPackageWithoutServiceResponses implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['data'] === null) {
+        if ($this->container['status'] === null) {
             return false;
         }
-        if ($this->container['status'] === null) {
+        if ($this->container['data'] === null) {
             return false;
         }
         return true;
     }
 
-
-    /**
-     * Gets data
-     *
-     * @return \Swagger\Client\Model\AddPackageWithoutServiceResponsesData
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param \Swagger\Client\Model\AddPackageWithoutServiceResponsesData $data data
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
-
-        return $this;
-    }
 
     /**
      * Gets status
@@ -267,6 +243,30 @@ class AddPackageWithoutServiceResponses implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return \Swagger\Client\Model\AddPackageWithoutServiceResponsesData
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param \Swagger\Client\Model\AddPackageWithoutServiceResponsesData $data data
+     *
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
 
         return $this;
     }

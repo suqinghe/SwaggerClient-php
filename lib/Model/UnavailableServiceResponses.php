@@ -58,10 +58,10 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'service_id' => 'string',
+        'unavailable_reason' => 'string',
         'service_name_en' => 'string',
         'service_name_zh' => 'string',
-        'unavailable_reason' => 'string'
+        'service_id' => 'string'
     ];
 
     /**
@@ -70,10 +70,10 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'service_id' => null,
+        'unavailable_reason' => null,
         'service_name_en' => null,
         'service_name_zh' => null,
-        'unavailable_reason' => null
+        'service_id' => null
     ];
 
     /**
@@ -103,10 +103,10 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'service_id' => 'serviceId',
+        'unavailable_reason' => 'unavailableReason',
         'service_name_en' => 'serviceNameEn',
         'service_name_zh' => 'serviceNameZh',
-        'unavailable_reason' => 'unavailableReason'
+        'service_id' => 'serviceId'
     ];
 
     /**
@@ -115,10 +115,10 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'service_id' => 'setServiceId',
+        'unavailable_reason' => 'setUnavailableReason',
         'service_name_en' => 'setServiceNameEn',
         'service_name_zh' => 'setServiceNameZh',
-        'unavailable_reason' => 'setUnavailableReason'
+        'service_id' => 'setServiceId'
     ];
 
     /**
@@ -127,10 +127,10 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'service_id' => 'getServiceId',
+        'unavailable_reason' => 'getUnavailableReason',
         'service_name_en' => 'getServiceNameEn',
         'service_name_zh' => 'getServiceNameZh',
-        'unavailable_reason' => 'getUnavailableReason'
+        'service_id' => 'getServiceId'
     ];
 
     /**
@@ -193,10 +193,10 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['service_id'] = isset($data['service_id']) ? $data['service_id'] : null;
+        $this->container['unavailable_reason'] = isset($data['unavailable_reason']) ? $data['unavailable_reason'] : null;
         $this->container['service_name_en'] = isset($data['service_name_en']) ? $data['service_name_en'] : null;
         $this->container['service_name_zh'] = isset($data['service_name_zh']) ? $data['service_name_zh'] : null;
-        $this->container['unavailable_reason'] = isset($data['unavailable_reason']) ? $data['unavailable_reason'] : null;
+        $this->container['service_id'] = isset($data['service_id']) ? $data['service_id'] : null;
     }
 
     /**
@@ -208,8 +208,8 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['service_id'] === null) {
-            $invalidProperties[] = "'service_id' can't be null";
+        if ($this->container['unavailable_reason'] === null) {
+            $invalidProperties[] = "'unavailable_reason' can't be null";
         }
         if ($this->container['service_name_en'] === null) {
             $invalidProperties[] = "'service_name_en' can't be null";
@@ -217,8 +217,8 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
         if ($this->container['service_name_zh'] === null) {
             $invalidProperties[] = "'service_name_zh' can't be null";
         }
-        if ($this->container['unavailable_reason'] === null) {
-            $invalidProperties[] = "'unavailable_reason' can't be null";
+        if ($this->container['service_id'] === null) {
+            $invalidProperties[] = "'service_id' can't be null";
         }
         return $invalidProperties;
     }
@@ -232,7 +232,7 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['service_id'] === null) {
+        if ($this->container['unavailable_reason'] === null) {
             return false;
         }
         if ($this->container['service_name_en'] === null) {
@@ -241,7 +241,7 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
         if ($this->container['service_name_zh'] === null) {
             return false;
         }
-        if ($this->container['unavailable_reason'] === null) {
+        if ($this->container['service_id'] === null) {
             return false;
         }
         return true;
@@ -249,25 +249,25 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets service_id
+     * Gets unavailable_reason
      *
      * @return string
      */
-    public function getServiceId()
+    public function getUnavailableReason()
     {
-        return $this->container['service_id'];
+        return $this->container['unavailable_reason'];
     }
 
     /**
-     * Sets service_id
+     * Sets unavailable_reason
      *
-     * @param string $service_id 物流服务ID
+     * @param string $unavailable_reason 不可用原因
      *
      * @return $this
      */
-    public function setServiceId($service_id)
+    public function setUnavailableReason($unavailable_reason)
     {
-        $this->container['service_id'] = $service_id;
+        $this->container['unavailable_reason'] = $unavailable_reason;
 
         return $this;
     }
@@ -321,25 +321,25 @@ class UnavailableServiceResponses implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets unavailable_reason
+     * Gets service_id
      *
      * @return string
      */
-    public function getUnavailableReason()
+    public function getServiceId()
     {
-        return $this->container['unavailable_reason'];
+        return $this->container['service_id'];
     }
 
     /**
-     * Sets unavailable_reason
+     * Sets service_id
      *
-     * @param string $unavailable_reason 不可用原因
+     * @param string $service_id 物流服务ID
      *
      * @return $this
      */
-    public function setUnavailableReason($unavailable_reason)
+    public function setServiceId($service_id)
     {
-        $this->container['unavailable_reason'] = $unavailable_reason;
+        $this->container['service_id'] = $service_id;
 
         return $this;
     }

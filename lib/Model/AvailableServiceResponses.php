@@ -60,9 +60,9 @@ class AvailableServiceResponses implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'currency_code' => 'string',
         'estimate_cost' => 'float',
-        'service_id' => 'string',
         'service_name_en' => 'string',
-        'service_name_zh' => 'string'
+        'service_name_zh' => 'string',
+        'service_id' => 'string'
     ];
 
     /**
@@ -73,9 +73,9 @@ class AvailableServiceResponses implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'currency_code' => null,
         'estimate_cost' => null,
-        'service_id' => null,
         'service_name_en' => null,
-        'service_name_zh' => null
+        'service_name_zh' => null,
+        'service_id' => null
     ];
 
     /**
@@ -107,9 +107,9 @@ class AvailableServiceResponses implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'currency_code' => 'currencyCode',
         'estimate_cost' => 'estimateCost',
-        'service_id' => 'serviceId',
         'service_name_en' => 'serviceNameEn',
-        'service_name_zh' => 'serviceNameZh'
+        'service_name_zh' => 'serviceNameZh',
+        'service_id' => 'serviceId'
     ];
 
     /**
@@ -120,9 +120,9 @@ class AvailableServiceResponses implements ModelInterface, ArrayAccess
     protected static $setters = [
         'currency_code' => 'setCurrencyCode',
         'estimate_cost' => 'setEstimateCost',
-        'service_id' => 'setServiceId',
         'service_name_en' => 'setServiceNameEn',
-        'service_name_zh' => 'setServiceNameZh'
+        'service_name_zh' => 'setServiceNameZh',
+        'service_id' => 'setServiceId'
     ];
 
     /**
@@ -133,9 +133,9 @@ class AvailableServiceResponses implements ModelInterface, ArrayAccess
     protected static $getters = [
         'currency_code' => 'getCurrencyCode',
         'estimate_cost' => 'getEstimateCost',
-        'service_id' => 'getServiceId',
         'service_name_en' => 'getServiceNameEn',
-        'service_name_zh' => 'getServiceNameZh'
+        'service_name_zh' => 'getServiceNameZh',
+        'service_id' => 'getServiceId'
     ];
 
     /**
@@ -200,9 +200,9 @@ class AvailableServiceResponses implements ModelInterface, ArrayAccess
     {
         $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
         $this->container['estimate_cost'] = isset($data['estimate_cost']) ? $data['estimate_cost'] : null;
-        $this->container['service_id'] = isset($data['service_id']) ? $data['service_id'] : null;
         $this->container['service_name_en'] = isset($data['service_name_en']) ? $data['service_name_en'] : null;
         $this->container['service_name_zh'] = isset($data['service_name_zh']) ? $data['service_name_zh'] : null;
+        $this->container['service_id'] = isset($data['service_id']) ? $data['service_id'] : null;
     }
 
     /**
@@ -220,14 +220,14 @@ class AvailableServiceResponses implements ModelInterface, ArrayAccess
         if ($this->container['estimate_cost'] === null) {
             $invalidProperties[] = "'estimate_cost' can't be null";
         }
-        if ($this->container['service_id'] === null) {
-            $invalidProperties[] = "'service_id' can't be null";
-        }
         if ($this->container['service_name_en'] === null) {
             $invalidProperties[] = "'service_name_en' can't be null";
         }
         if ($this->container['service_name_zh'] === null) {
             $invalidProperties[] = "'service_name_zh' can't be null";
+        }
+        if ($this->container['service_id'] === null) {
+            $invalidProperties[] = "'service_id' can't be null";
         }
         return $invalidProperties;
     }
@@ -247,13 +247,13 @@ class AvailableServiceResponses implements ModelInterface, ArrayAccess
         if ($this->container['estimate_cost'] === null) {
             return false;
         }
-        if ($this->container['service_id'] === null) {
-            return false;
-        }
         if ($this->container['service_name_en'] === null) {
             return false;
         }
         if ($this->container['service_name_zh'] === null) {
+            return false;
+        }
+        if ($this->container['service_id'] === null) {
             return false;
         }
         return true;
@@ -309,30 +309,6 @@ class AvailableServiceResponses implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets service_id
-     *
-     * @return string
-     */
-    public function getServiceId()
-    {
-        return $this->container['service_id'];
-    }
-
-    /**
-     * Sets service_id
-     *
-     * @param string $service_id 物流服务ID
-     *
-     * @return $this
-     */
-    public function setServiceId($service_id)
-    {
-        $this->container['service_id'] = $service_id;
-
-        return $this;
-    }
-
-    /**
      * Gets service_name_en
      *
      * @return string
@@ -376,6 +352,30 @@ class AvailableServiceResponses implements ModelInterface, ArrayAccess
     public function setServiceNameZh($service_name_zh)
     {
         $this->container['service_name_zh'] = $service_name_zh;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_id
+     *
+     * @return string
+     */
+    public function getServiceId()
+    {
+        return $this->container['service_id'];
+    }
+
+    /**
+     * Sets service_id
+     *
+     * @param string $service_id 物流服务ID
+     *
+     * @return $this
+     */
+    public function setServiceId($service_id)
+    {
+        $this->container['service_id'] = $service_id;
 
         return $this;
     }
